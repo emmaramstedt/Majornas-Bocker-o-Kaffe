@@ -336,13 +336,13 @@ function Footer() {
               Cookies
             </li>
             <p className="text-gray-800 md:hidden font-bold text-2xl pb-3">
-              Profil
+              Annat
             </p>
             <li className="text-gray-500 md:hidden text-md pb-2 font-semibold hover:text-link cursor-pointer">
-              Ändra profil
+              Text
             </li>
             <li className="text-gray-500 md:hidden text-md pb-[30px] font-semibold hover:text-link cursor-pointer">
-              Radera profil
+              Text
             </li>
           </ul>
           {/* END */}
@@ -364,12 +364,12 @@ function Footer() {
             <li className="text-gray-500 text-md pb-8 font-semibold hover:text-link cursor-pointer">
               Försäkring
             </li>
-            <p className="text-gray-800 font-bold text-2xl pb-3">Profil</p>
+            <p className="text-gray-800 font-bold text-2xl pb-3">Annat</p>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-link cursor-pointer">
-              Ändra profil
+              Text
             </li>
             <li className="text-gray-500 text-md pb-2 font-semibold hover:text-link cursor-pointer">
-              Radera profil
+              Text
             </li>
           </ul>
         </div>

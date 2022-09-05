@@ -8,7 +8,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
-      <nav className=" bg-white fixed w-full z-10">
+      <nav className=" bg-gray-50 fixed w-full z-10">
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center ml-3  justify-between w-full sm:ml-[24px] xl:ml-[72px]">
