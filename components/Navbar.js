@@ -1,8 +1,8 @@
+// Next Imports
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/vercel.svg";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,25 +32,25 @@ function Navbar() {
               </Link>
               <div className="hidden md:block">
                 <div className="flex justify-center items-center flex-shrink-0">
-                  <button className="hidden lg:block cursor-pointer hover:bg-link text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
+                  <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
                     <Link activeClass="tenats" href="/users">
                       FÖRFATTARE
                     </Link>
                   </button>
 
-                  <button className="hidden lg:block cursor-pointer hover:bg-link text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
+                  <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
                     <Link activeClass="questions" href="/questions">
                       <a>FRÅGOR OCH SVAR</a>
                     </Link>
                   </button>
 
-                  <button className="hidden lg:block cursor-pointer hover:bg-link text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
+                  <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
                     <Link activeClass="contact" href="/contact">
                       <a>KONTAKT</a>
                     </Link>
                   </button>
 
-                  <button className="hidden lg:block cursor-pointer hover:bg-link text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
+                  <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
                     <Link activeClass="search" href="#">
                       <a>
                         <svg
@@ -85,177 +85,16 @@ function Navbar() {
                     </Link>
                   </button>
 
-                  <button className="hidden lg:block cursor-pointer hover:stroke-teal-900 px-3 mr-10">
-                    <Link href="/login" activeClass="login">
-                      <a>
-                        <svg
-                          width="121"
-                          height="44"
-                          viewBox="0 0 121 44"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g filter="url(#filter0_d_404_2306)">
-                            <path
-                              d="M2 21C2 9.95431 10.9543 1 22 1H99C110.046 1 119 9.95431 119 21V21C119 32.0457 110.046 41 99 41H22C10.9543 41 2 32.0457 2 21V21Z"
-                              fill="#026E78"
-                            />
-                            <path
-                              d="M28.0001 20.1667C29.841 20.1667 31.3334 18.6743 31.3334 16.8333C31.3334 14.9924 29.841 13.5 28.0001 13.5C26.1591 13.5 24.6667 14.9924 24.6667 16.8333C24.6667 18.6743 26.1591 20.1667 28.0001 20.1667Z"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              d="M23 28.5V26.8333C23 25.9493 23.3512 25.1014 23.9763 24.4763C24.6014 23.8512 25.4493 23.5 26.3333 23.5H29.6667C30.5507 23.5 31.3986 23.8512 32.0237 24.4763C32.6488 25.1014 33 25.9493 33 26.8333V28.5"
-                              stroke="white"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            />
-                            <path
-                              stroke="white"
-                              d="M47.232 26V16.13H48.394V24.992H53.378V26H47.232ZM57.5505 26.126C56.8785 26.126 56.2905 25.9813 55.7865 25.692C55.2919 25.3933 54.9092 24.9733 54.6385 24.432C54.3679 23.8813 54.2325 23.2327 54.2325 22.486C54.2325 21.73 54.3679 21.0813 54.6385 20.54C54.9092 19.9987 55.2919 19.5833 55.7865 19.294C56.2905 18.9953 56.8785 18.846 57.5505 18.846C58.2319 18.846 58.8199 18.9953 59.3145 19.294C59.8185 19.5833 60.2059 19.9987 60.4765 20.54C60.7565 21.0813 60.8965 21.73 60.8965 22.486C60.8965 23.2327 60.7565 23.8813 60.4765 24.432C60.2059 24.9733 59.8185 25.3933 59.3145 25.692C58.8199 25.9813 58.2319 26.126 57.5505 26.126ZM57.5505 25.202C58.2225 25.202 58.7545 24.9733 59.1465 24.516C59.5385 24.0493 59.7345 23.3727 59.7345 22.486C59.7345 21.59 59.5339 20.9133 59.1325 20.456C58.7405 19.9893 58.2132 19.756 57.5505 19.756C56.8879 19.756 56.3605 19.9893 55.9685 20.456C55.5765 20.9133 55.3805 21.59 55.3805 22.486C55.3805 23.3727 55.5765 24.0493 55.9685 24.516C56.3605 24.9733 56.8879 25.202 57.5505 25.202ZM65.7586 29.122C65.1519 29.122 64.5919 29.0473 64.0786 28.898C63.5653 28.7487 63.1033 28.52 62.6926 28.212L63.0286 27.358C63.3179 27.5633 63.6026 27.7267 63.8826 27.848C64.1626 27.9693 64.4519 28.058 64.7506 28.114C65.0493 28.1793 65.3666 28.212 65.7026 28.212C66.3933 28.212 66.9159 28.03 67.2706 27.666C67.6253 27.302 67.8026 26.784 67.8026 26.112V24.054H67.9426C67.7933 24.6047 67.4853 25.0433 67.0186 25.37C66.5519 25.6873 66.0059 25.846 65.3806 25.846C64.7366 25.846 64.1766 25.706 63.7006 25.426C63.2339 25.1367 62.8699 24.7307 62.6086 24.208C62.3566 23.676 62.2306 23.0507 62.2306 22.332C62.2306 21.6227 62.3566 21.0067 62.6086 20.484C62.8699 19.9613 63.2339 19.56 63.7006 19.28C64.1766 18.9907 64.7366 18.846 65.3806 18.846C66.0153 18.846 66.5613 19.0047 67.0186 19.322C67.4853 19.6393 67.7933 20.078 67.9426 20.638L67.8026 20.498L67.9286 18.972H69.0346C68.9973 19.2427 68.9693 19.518 68.9506 19.798C68.9319 20.0687 68.9226 20.3347 68.9226 20.596V25.958C68.9226 27.0033 68.6519 27.792 68.1106 28.324C67.5786 28.856 66.7946 29.122 65.7586 29.122ZM65.5906 24.922C66.2719 24.922 66.8086 24.698 67.2006 24.25C67.5926 23.7927 67.7886 23.1533 67.7886 22.332C67.7886 21.5107 67.5926 20.876 67.2006 20.428C66.8086 19.98 66.2719 19.756 65.5906 19.756C64.9186 19.756 64.3819 19.98 63.9806 20.428C63.5793 20.876 63.3786 21.5107 63.3786 22.332C63.3786 23.1533 63.5793 23.7927 63.9806 24.25C64.3819 24.698 64.9186 24.922 65.5906 24.922ZM74.1941 29.122C73.5875 29.122 73.0275 29.0473 72.5141 28.898C72.0008 28.7487 71.5388 28.52 71.1281 28.212L71.4641 27.358C71.7535 27.5633 72.0381 27.7267 72.3181 27.848C72.5981 27.9693 72.8875 28.058 73.1861 28.114C73.4848 28.1793 73.8021 28.212 74.1381 28.212C74.8288 28.212 75.3515 28.03 75.7061 27.666C76.0608 27.302 76.2381 26.784 76.2381 26.112V24.054H76.3781C76.2288 24.6047 75.9208 25.0433 75.4541 25.37C74.9875 25.6873 74.4415 25.846 73.8161 25.846C73.1721 25.846 72.6121 25.706 72.1361 25.426C71.6695 25.1367 71.3055 24.7307 71.0441 24.208C70.7921 23.676 70.6661 23.0507 70.6661 22.332C70.6661 21.6227 70.7921 21.0067 71.0441 20.484C71.3055 19.9613 71.6695 19.56 72.1361 19.28C72.6121 18.9907 73.1721 18.846 73.8161 18.846C74.4508 18.846 74.9968 19.0047 75.4541 19.322C75.9208 19.6393 76.2288 20.078 76.3781 20.638L76.2381 20.498L76.3641 18.972H77.4701C77.4328 19.2427 77.4048 19.518 77.3861 19.798C77.3675 20.0687 77.3581 20.3347 77.3581 20.596V25.958C77.3581 27.0033 77.0875 27.792 76.5461 28.324C76.0141 28.856 75.2301 29.122 74.1941 29.122ZM74.0261 24.922C74.7075 24.922 75.2441 24.698 75.6361 24.25C76.0281 23.7927 76.2241 23.1533 76.2241 22.332C76.2241 21.5107 76.0281 20.876 75.6361 20.428C75.2441 19.98 74.7075 19.756 74.0261 19.756C73.3541 19.756 72.8175 19.98 72.4161 20.428C72.0148 20.876 71.8141 21.5107 71.8141 22.332C71.8141 23.1533 72.0148 23.7927 72.4161 24.25C72.8175 24.698 73.3541 24.922 74.0261 24.922ZM82.2097 26.126C81.5844 26.126 81.0384 25.9813 80.5717 25.692C80.105 25.3933 79.741 24.9733 79.4797 24.432C79.2277 23.8907 79.1017 23.242 79.1017 22.486C79.1017 21.7207 79.2277 21.0673 79.4797 20.526C79.741 19.9847 80.105 19.5693 80.5717 19.28C81.0384 18.9907 81.5844 18.846 82.2097 18.846C82.8444 18.846 83.3904 19.0093 83.8477 19.336C84.3144 19.6533 84.6224 20.0873 84.7717 20.638H84.6037L84.7577 18.972H85.8497C85.8217 19.2427 85.7937 19.518 85.7657 19.798C85.747 20.0687 85.7377 20.3347 85.7377 20.596V26H84.6037V24.348H84.7577C84.6084 24.8987 84.3004 25.3327 83.8337 25.65C83.367 25.9673 82.8257 26.126 82.2097 26.126ZM82.4337 25.202C83.1057 25.202 83.6377 24.9733 84.0297 24.516C84.4217 24.0493 84.6177 23.3727 84.6177 22.486C84.6177 21.59 84.4217 20.9133 84.0297 20.456C83.6377 19.9893 83.1057 19.756 82.4337 19.756C81.771 19.756 81.239 19.9893 80.8377 20.456C80.4457 20.9133 80.2497 21.59 80.2497 22.486C80.2497 23.3727 80.4457 24.0493 80.8377 24.516C81.239 24.9733 81.771 25.202 82.4337 25.202ZM91.5806 26V18.972H92.7146V26H91.5806ZM91.4406 17.376V16.102H92.8406V17.376H91.4406ZM94.9165 26V20.596C94.9165 20.3347 94.9025 20.0687 94.8745 19.798C94.8559 19.518 94.8325 19.2427 94.8045 18.972H95.8965L96.0365 20.512H95.8685C96.0739 19.9707 96.4005 19.56 96.8485 19.28C97.3059 18.9907 97.8332 18.846 98.4305 18.846C99.2612 18.846 99.8865 19.07 100.307 19.518C100.736 19.9567 100.951 20.652 100.951 21.604V26H99.8165V21.674C99.8165 21.0113 99.6812 20.5307 99.4105 20.232C99.1492 19.924 98.7385 19.77 98.1785 19.77C97.5252 19.77 97.0072 19.9707 96.6245 20.372C96.2419 20.7733 96.0505 21.31 96.0505 21.982V26H94.9165Z"
-                              fill="white"
-                            />
-                            <path
-                              d="M22 2H99V0H22V2ZM99 40H22V42H99V40ZM22 40C11.5066 40 3 31.4934 3 21H1C1 32.598 10.402 42 22 42V40ZM118 21C118 31.4934 109.493 40 99 40V42C110.598 42 120 32.598 120 21H118ZM99 2C109.493 2 118 10.5066 118 21H120C120 9.40202 110.598 0 99 0V2ZM22 0C10.402 0 1 9.40202 1 21H3C3 10.5066 11.5066 2 22 2V0Z"
-                              fill="#026E78"
-                            />
-                          </g>
-                          <defs>
-                            <filter
-                              id="filter0_d_404_2306"
-                              x="0"
-                              y="0"
-                              width="121"
-                              height="44"
-                              filterUnits="userSpaceOnUse"
-                              colorInterpolationFilters="sRGB"
-                            >
-                              <feFlood
-                                floodOpacity="0"
-                                result="BackgroundImageFix"
-                              />
-                              <feColorMatrix
-                                in="SourceAlpha"
-                                type="matrix"
-                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                result="hardAlpha"
-                              />
-                              <feOffset dy="1" />
-                              <feGaussianBlur stdDeviation="1" />
-                              <feColorMatrix
-                                type="matrix"
-                                values="0 0 0 0 0.776471 0 0 0 0 0.894118 0 0 0 0 0.964706 0 0 0 0.05 0"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in2="BackgroundImageFix"
-                                result="effect1_dropShadow_404_2306"
-                              />
-                              <feBlend
-                                mode="normal"
-                                in="SourceGraphic"
-                                in2="effect1_dropShadow_404_2306"
-                                result="shape"
-                              />
-                            </filter>
-                          </defs>
-                        </svg>
-                      </a>
+                  <button className="lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
+                    <Link activeClass="contact" href="/contact">
+                      <a>LOGGA IN</a>
                     </Link>
                   </button>
                 </div>
               </div>
-              {/* Screen 1054 */}
-              <div className="lg:hidden sm:flex md:flex xs:mr-[10px] justify-center items-center flex-shrink-0">
-                <button className="cursor-pointer hover:stroke-teal-900 md:px-3 md:pt-[0px] sm:pt-[0px] xs:pt-[6px]">
-                  <Link activeClass="profile" href="/login">
-                    <a>
-                      <svg
-                        width="121"
-                        height="44"
-                        viewBox="0 0 121 44"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g filter="url(#filter0_d_404_2306)">
-                          <path
-                            d="M2 21C2 9.95431 10.9543 1 22 1H99C110.046 1 119 9.95431 119 21V21C119 32.0457 110.046 41 99 41H22C10.9543 41 2 32.0457 2 21V21Z"
-                            fill="#026E78"
-                          />
-                          <path
-                            d="M28.0001 20.1667C29.841 20.1667 31.3334 18.6743 31.3334 16.8333C31.3334 14.9924 29.841 13.5 28.0001 13.5C26.1591 13.5 24.6667 14.9924 24.6667 16.8333C24.6667 18.6743 26.1591 20.1667 28.0001 20.1667Z"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M23 28.5V26.8333C23 25.9493 23.3512 25.1014 23.9763 24.4763C24.6014 23.8512 25.4493 23.5 26.3333 23.5H29.6667C30.5507 23.5 31.3986 23.8512 32.0237 24.4763C32.6488 25.1014 33 25.9493 33 26.8333V28.5"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            stroke="white"
-                            d="M47.232 26V16.13H48.394V24.992H53.378V26H47.232ZM57.5505 26.126C56.8785 26.126 56.2905 25.9813 55.7865 25.692C55.2919 25.3933 54.9092 24.9733 54.6385 24.432C54.3679 23.8813 54.2325 23.2327 54.2325 22.486C54.2325 21.73 54.3679 21.0813 54.6385 20.54C54.9092 19.9987 55.2919 19.5833 55.7865 19.294C56.2905 18.9953 56.8785 18.846 57.5505 18.846C58.2319 18.846 58.8199 18.9953 59.3145 19.294C59.8185 19.5833 60.2059 19.9987 60.4765 20.54C60.7565 21.0813 60.8965 21.73 60.8965 22.486C60.8965 23.2327 60.7565 23.8813 60.4765 24.432C60.2059 24.9733 59.8185 25.3933 59.3145 25.692C58.8199 25.9813 58.2319 26.126 57.5505 26.126ZM57.5505 25.202C58.2225 25.202 58.7545 24.9733 59.1465 24.516C59.5385 24.0493 59.7345 23.3727 59.7345 22.486C59.7345 21.59 59.5339 20.9133 59.1325 20.456C58.7405 19.9893 58.2132 19.756 57.5505 19.756C56.8879 19.756 56.3605 19.9893 55.9685 20.456C55.5765 20.9133 55.3805 21.59 55.3805 22.486C55.3805 23.3727 55.5765 24.0493 55.9685 24.516C56.3605 24.9733 56.8879 25.202 57.5505 25.202ZM65.7586 29.122C65.1519 29.122 64.5919 29.0473 64.0786 28.898C63.5653 28.7487 63.1033 28.52 62.6926 28.212L63.0286 27.358C63.3179 27.5633 63.6026 27.7267 63.8826 27.848C64.1626 27.9693 64.4519 28.058 64.7506 28.114C65.0493 28.1793 65.3666 28.212 65.7026 28.212C66.3933 28.212 66.9159 28.03 67.2706 27.666C67.6253 27.302 67.8026 26.784 67.8026 26.112V24.054H67.9426C67.7933 24.6047 67.4853 25.0433 67.0186 25.37C66.5519 25.6873 66.0059 25.846 65.3806 25.846C64.7366 25.846 64.1766 25.706 63.7006 25.426C63.2339 25.1367 62.8699 24.7307 62.6086 24.208C62.3566 23.676 62.2306 23.0507 62.2306 22.332C62.2306 21.6227 62.3566 21.0067 62.6086 20.484C62.8699 19.9613 63.2339 19.56 63.7006 19.28C64.1766 18.9907 64.7366 18.846 65.3806 18.846C66.0153 18.846 66.5613 19.0047 67.0186 19.322C67.4853 19.6393 67.7933 20.078 67.9426 20.638L67.8026 20.498L67.9286 18.972H69.0346C68.9973 19.2427 68.9693 19.518 68.9506 19.798C68.9319 20.0687 68.9226 20.3347 68.9226 20.596V25.958C68.9226 27.0033 68.6519 27.792 68.1106 28.324C67.5786 28.856 66.7946 29.122 65.7586 29.122ZM65.5906 24.922C66.2719 24.922 66.8086 24.698 67.2006 24.25C67.5926 23.7927 67.7886 23.1533 67.7886 22.332C67.7886 21.5107 67.5926 20.876 67.2006 20.428C66.8086 19.98 66.2719 19.756 65.5906 19.756C64.9186 19.756 64.3819 19.98 63.9806 20.428C63.5793 20.876 63.3786 21.5107 63.3786 22.332C63.3786 23.1533 63.5793 23.7927 63.9806 24.25C64.3819 24.698 64.9186 24.922 65.5906 24.922ZM74.1941 29.122C73.5875 29.122 73.0275 29.0473 72.5141 28.898C72.0008 28.7487 71.5388 28.52 71.1281 28.212L71.4641 27.358C71.7535 27.5633 72.0381 27.7267 72.3181 27.848C72.5981 27.9693 72.8875 28.058 73.1861 28.114C73.4848 28.1793 73.8021 28.212 74.1381 28.212C74.8288 28.212 75.3515 28.03 75.7061 27.666C76.0608 27.302 76.2381 26.784 76.2381 26.112V24.054H76.3781C76.2288 24.6047 75.9208 25.0433 75.4541 25.37C74.9875 25.6873 74.4415 25.846 73.8161 25.846C73.1721 25.846 72.6121 25.706 72.1361 25.426C71.6695 25.1367 71.3055 24.7307 71.0441 24.208C70.7921 23.676 70.6661 23.0507 70.6661 22.332C70.6661 21.6227 70.7921 21.0067 71.0441 20.484C71.3055 19.9613 71.6695 19.56 72.1361 19.28C72.6121 18.9907 73.1721 18.846 73.8161 18.846C74.4508 18.846 74.9968 19.0047 75.4541 19.322C75.9208 19.6393 76.2288 20.078 76.3781 20.638L76.2381 20.498L76.3641 18.972H77.4701C77.4328 19.2427 77.4048 19.518 77.3861 19.798C77.3675 20.0687 77.3581 20.3347 77.3581 20.596V25.958C77.3581 27.0033 77.0875 27.792 76.5461 28.324C76.0141 28.856 75.2301 29.122 74.1941 29.122ZM74.0261 24.922C74.7075 24.922 75.2441 24.698 75.6361 24.25C76.0281 23.7927 76.2241 23.1533 76.2241 22.332C76.2241 21.5107 76.0281 20.876 75.6361 20.428C75.2441 19.98 74.7075 19.756 74.0261 19.756C73.3541 19.756 72.8175 19.98 72.4161 20.428C72.0148 20.876 71.8141 21.5107 71.8141 22.332C71.8141 23.1533 72.0148 23.7927 72.4161 24.25C72.8175 24.698 73.3541 24.922 74.0261 24.922ZM82.2097 26.126C81.5844 26.126 81.0384 25.9813 80.5717 25.692C80.105 25.3933 79.741 24.9733 79.4797 24.432C79.2277 23.8907 79.1017 23.242 79.1017 22.486C79.1017 21.7207 79.2277 21.0673 79.4797 20.526C79.741 19.9847 80.105 19.5693 80.5717 19.28C81.0384 18.9907 81.5844 18.846 82.2097 18.846C82.8444 18.846 83.3904 19.0093 83.8477 19.336C84.3144 19.6533 84.6224 20.0873 84.7717 20.638H84.6037L84.7577 18.972H85.8497C85.8217 19.2427 85.7937 19.518 85.7657 19.798C85.747 20.0687 85.7377 20.3347 85.7377 20.596V26H84.6037V24.348H84.7577C84.6084 24.8987 84.3004 25.3327 83.8337 25.65C83.367 25.9673 82.8257 26.126 82.2097 26.126ZM82.4337 25.202C83.1057 25.202 83.6377 24.9733 84.0297 24.516C84.4217 24.0493 84.6177 23.3727 84.6177 22.486C84.6177 21.59 84.4217 20.9133 84.0297 20.456C83.6377 19.9893 83.1057 19.756 82.4337 19.756C81.771 19.756 81.239 19.9893 80.8377 20.456C80.4457 20.9133 80.2497 21.59 80.2497 22.486C80.2497 23.3727 80.4457 24.0493 80.8377 24.516C81.239 24.9733 81.771 25.202 82.4337 25.202ZM91.5806 26V18.972H92.7146V26H91.5806ZM91.4406 17.376V16.102H92.8406V17.376H91.4406ZM94.9165 26V20.596C94.9165 20.3347 94.9025 20.0687 94.8745 19.798C94.8559 19.518 94.8325 19.2427 94.8045 18.972H95.8965L96.0365 20.512H95.8685C96.0739 19.9707 96.4005 19.56 96.8485 19.28C97.3059 18.9907 97.8332 18.846 98.4305 18.846C99.2612 18.846 99.8865 19.07 100.307 19.518C100.736 19.9567 100.951 20.652 100.951 21.604V26H99.8165V21.674C99.8165 21.0113 99.6812 20.5307 99.4105 20.232C99.1492 19.924 98.7385 19.77 98.1785 19.77C97.5252 19.77 97.0072 19.9707 96.6245 20.372C96.2419 20.7733 96.0505 21.31 96.0505 21.982V26H94.9165Z"
-                            fill="white"
-                          />
-                          <path
-                            d="M22 2H99V0H22V2ZM99 40H22V42H99V40ZM22 40C11.5066 40 3 31.4934 3 21H1C1 32.598 10.402 42 22 42V40ZM118 21C118 31.4934 109.493 40 99 40V42C110.598 42 120 32.598 120 21H118ZM99 2C109.493 2 118 10.5066 118 21H120C120 9.40202 110.598 0 99 0V2ZM22 0C10.402 0 1 9.40202 1 21H3C3 10.5066 11.5066 2 22 2V0Z"
-                            fill="#026E78"
-                          />
-                        </g>
-                        <defs>
-                          <filter
-                            id="filter0_d_404_2306"
-                            x="0"
-                            y="0"
-                            width="121"
-                            height="44"
-                            filterUnits="userSpaceOnUse"
-                            colorInterpolationFilters="sRGB"
-                          >
-                            <feFlood
-                              floodOpacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feColorMatrix
-                              in="SourceAlpha"
-                              type="matrix"
-                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                              result="hardAlpha"
-                            />
-                            <feOffset dy="1" />
-                            <feGaussianBlur stdDeviation="1" />
-                            <feColorMatrix
-                              type="matrix"
-                              values="0 0 0 0 0.776471 0 0 0 0 0.894118 0 0 0 0 0.964706 0 0 0 0.05 0"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in2="BackgroundImageFix"
-                              result="effect1_dropShadow_404_2306"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="effect1_dropShadow_404_2306"
-                              result="shape"
-                            />
-                          </filter>
-                        </defs>
-                      </svg>
-                    </a>
-                  </Link>
-                </button>
-              </div>
             </div>
-            {/* Hamburger Menu */}
+
+            {/* ----------- Hamburger Menu ----------- */}
             <div className="mr-3 sm:mr-[24px] flex lg:hidden ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -318,13 +157,13 @@ function Navbar() {
                 ref={ref}
                 className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
               >
-                <button className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link href="/users" activeClass="home">
                     HYRESGÄSTER
                   </Link>
                 </button>
 
-                <button className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link
                     href="/about"
                     activeClass="about"
@@ -337,7 +176,7 @@ function Navbar() {
                   </Link>
                 </button>
 
-                <button className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link
                     href="/work"
                     activeClass="work"
@@ -345,13 +184,13 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     <a>KONTAKT</a>
                   </Link>
                 </button>
 
-                <button className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link
                     href="/services"
                     activeClass="services"
@@ -359,13 +198,13 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     <a>SÖK</a>
                   </Link>
                 </button>
 
-                <button className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link
                     href="/contact"
                     activeClass="work"
@@ -373,7 +212,7 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
-                    className="cursor-pointer hover:bg-link text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     <a>ANNAT</a>
                   </Link>

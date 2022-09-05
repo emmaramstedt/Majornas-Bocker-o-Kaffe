@@ -1,3 +1,4 @@
+// Next Imports
 import React from "react";
 
 function Footer() {
@@ -10,7 +11,6 @@ function Footer() {
     <>
       <div className="bg-gray-50 w-full md:hidden sm:flex xs:flex justify-around items-start p-0">
         <div className="p-5">
-          {/* <ul> */}
           böker
           <p className="text-gray-800 font-bold text-2xl pb-6 pt-3">Villkor</p>
           <div className="text-gray-800 text-1xl pb-0">
@@ -21,7 +21,6 @@ function Footer() {
             />
             Ut posuere purus neque.
           </div>
-          {/* </ul> */}
         </div>
       </div>
       <div className="bg-gray-50 h-1/2 w-full flex md:flex-row  justify-between items-start md:p-[24px] xl:p-[72px] xs:pl-[60px] xs:pr-[80px] xs:pt-[30px]">
