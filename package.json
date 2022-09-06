@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "@contentful/rich-text-html-renderer": "^15.12.0",
     "@contentful/rich-text-react-renderer": "^15.12.1",
     "contentful": "^9.1.34",

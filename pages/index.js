@@ -1,5 +1,10 @@
+// Next Imports
 import Head from "next/head";
 import client from "../contentful";
+
+// Custom Imports
+import Layout from "../components/Layout";
+import HeroSection from "../components/HeroSection";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "testmodel" });
@@ -9,10 +14,17 @@ export async function getStaticProps() {
     },
   };
 }
+
 export default function Home({ testmodels }) {
   console.log(testmodels);
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout
+      pageMeta={{
+        title: "Hem",
+        description: "Hem",
+      }}
+    >
+     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
         <title>Majornas Böcker & Kaffe</title>
         <link rel="icon" href="/favicon.ico" />
@@ -24,5 +36,7 @@ export default function Home({ testmodels }) {
 
       <footer className="flex items-center justify-center w-full h-24 border-t"></footer>
     </div>
+      <HeroSection />
+    </Layout>
   );
 }
