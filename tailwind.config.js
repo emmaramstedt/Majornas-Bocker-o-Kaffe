@@ -39,6 +39,7 @@ module.exports = {
         cards: "#FCFCFD",
         heroBackground: "#FFFFFF",
         orangeColor: "#FEB273",
+        defaultGray100: "F2F2F2",
       },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
