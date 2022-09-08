@@ -25,13 +25,7 @@ const Layout = ({ children, pageMeta }) => {
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
-        {/* Google fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Rubik+Glitch&display=swap"
-          rel="stylesheet"
-        />
+        {/* Meta properties */}
         <meta
           property="og:url"
           content={`http://localhost:3000${router.asPath}`}

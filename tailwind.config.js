@@ -6,7 +6,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Mulish", "system-ui"],
+      poppins: ["Poppins", "sans-serif"],
+      spaceMono: ["Space Mono", "cursive"],
     },
     screens: {
       xs: "20px",
