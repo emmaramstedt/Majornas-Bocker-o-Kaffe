@@ -30,6 +30,9 @@ function Navbar() {
                   />
                 </svg>
               </Link>
+
+              {/* ----------- Desktop Menu ----------- */}
+
               <div className="hidden md:block">
                 <div className="flex justify-center items-center flex-shrink-0">
                   <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
@@ -49,52 +52,12 @@ function Navbar() {
                       <a>KONTAKT</a>
                     </Link>
                   </button>
-
-                  <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
-                    <Link activeClass="search" href="#">
-                      <a>
-                        <svg
-                          width="25"
-                          height="26"
-                          viewBox="0 0 29 30"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            width="2"
-                            height="32"
-                            transform="matrix(-1 0 0 1 2.3335 0)"
-                            fill="#242424"
-                          />
-                          <path
-                            d="M16.3335 21C20.1995 21 23.3335 17.866 23.3335 14C23.3335 10.134 20.1995 7 16.3335 7C12.4675 7 9.3335 10.134 9.3335 14C9.3335 17.866 12.4675 21 16.3335 21Z"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <path
-                            d="M27.3335 25L21.3335 19"
-                            stroke="black"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                      </a>
-                    </Link>
-                  </button>
-
-                  <button className="lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[50px] rounded-full text-sm font-medium">
-                    <Link activeClass="contact" href="/contact">
-                      <a>LOGGA IN</a>
-                    </Link>
-                  </button>
                 </div>
               </div>
             </div>
 
             {/* ----------- Hamburger Menu ----------- */}
+
             <div className="mr-3 sm:mr-[24px] flex lg:hidden ">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -158,12 +121,6 @@ function Navbar() {
                 className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
               >
                 <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                  <Link href="/users" activeClass="home">
-                    HYRESGÄSTER
-                  </Link>
-                </button>
-
-                <button className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                   <Link
                     href="/about"
                     activeClass="about"
@@ -171,8 +128,9 @@ function Navbar() {
                     smooth={true}
                     offset={50}
                     duration={500}
+                    className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    <a>FRÅGOR OCH SVAR</a>
+                    <a>OM OSS</a>
                   </Link>
                 </button>
 
@@ -186,7 +144,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    <a>KONTAKT</a>
+                    <a>KALENDARIUM</a>
                   </Link>
                 </button>
 
@@ -200,7 +158,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:bg-orangeColor text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
-                    <a>SÖK</a>
+                    <a>KONTAKT</a>
                   </Link>
                 </button>
 
