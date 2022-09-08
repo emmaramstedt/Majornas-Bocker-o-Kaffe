@@ -20,22 +20,17 @@ export default function Home({ testmodels }) {
   return (
     <Layout
       pageMeta={{
-        title: "Hem",
-        description: "Hem",
+        title: "Majornas Böcker & Kaffe - Hem",
+        description: "Hem Majornas Böcker & Kaffe",
       }}
     >
-     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Majornas Böcker & Kaffe</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+          <p className="mt-3 text-2xl">check the console</p>
+        </main>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <p className="mt-3 text-2xl">check the console</p>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t"></footer>
-    </div>
+        <footer className="flex items-center justify-center w-full h-24 border-t"></footer>
+      </div>
       <HeroSection />
     </Layout>
   );

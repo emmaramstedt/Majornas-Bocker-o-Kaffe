@@ -1,6 +1,6 @@
 // Next Imports
-import Head from "next/head";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // Custom Imports
 import Footer from "./Footer";
