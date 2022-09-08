@@ -34,13 +34,13 @@ function Navbar() {
                 <div className="flex justify-center items-center flex-shrink-0">
                   <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
                     <Link activeClass="tenats" href="/users">
-                      FÖRFATTARE
+                      OM OSS
                     </Link>
                   </button>
 
                   <button className="hidden lg:block cursor-pointer hover:bg-orangeColor text-black hover:text-white px-3 py-2 mr-[40px] rounded-full text-sm font-medium">
                     <Link activeClass="questions" href="/questions">
-                      <a>FRÅGOR OCH SVAR</a>
+                      <a>KALENDARIUM</a>
                     </Link>
                   </button>
 
