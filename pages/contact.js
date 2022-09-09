@@ -1,7 +1,9 @@
+// Client Import
+import client from "../contentful";
+
+// Custom Imports
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
-
-import client from "../contentful";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "contactDetails" });
@@ -13,16 +15,19 @@ export async function getStaticProps() {
 }
 
 export default function contactPage({ contactDetails }) {
-  // console.log(contactDetails[0].fields.phoneNumber);
+  console.log(contactDetails[0].fields);
   return (
     <>
       <Layout
         pageMeta={{
-          title: "Majornas Böcker & Kaffe - Kontakt",
+          title: `${contactDetails[0].fields.companyName} - Kontakt`,
           description: "Kontaktuppgifter",
         }}
       >
-        <Contact phoneNumber={contactDetails[0].fields.phoneNumber} />
+        <Contact
+          phoneNumber={contactDetails[0].fields.phoneNumber}
+          email={contactDetails[0].fields.email}
+        />
       </Layout>
     </>
   );

@@ -1,4 +1,6 @@
+// Custom Imports
 import Image from "next/image";
+import Details from "./contact/Details";
 
 export default function Contact(props) {
   return (
@@ -19,58 +21,28 @@ export default function Contact(props) {
               height={312}
             />
           </div>
-          <div className="w-[312px] mt-[24px]">
-            <h2 className="text-left xs:text-[24px] text-extendedTrueGray900">
-              Tisdag-Fredag
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              11-18
-            </p>
-            <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
-              Lördag
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              11-15
-            </p>
-            <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
-              Allmänna vägen 22
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              414 60
-            </p>
+          <div className="w-[312px] mt-[8px]">
+            <Details title="Tisdag-Fredag" text="11-18" />
+            <Details title="Lördag" text="11-15" />
+            <Details title="Allmänna vägen 22" text="414 60" />
             <p className="text-left xs:text-[20px] text-extendedTrueGray500">
               Göteborg
             </p>
-            <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
-              Instagram
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              @majornasbocker
-            </p>
-            <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
-              E-post
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              info@majornasbocker.se
-            </p>
-            <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
-              Telefon
-            </h2>
-            <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              {props.phoneNumber}
-            </p>
+            <Details title="Instagram" text="@majornasbocker" />
+            <Details title="E-post" text={props.email} />
+            <Details title="Telefon" text={props.phoneNumber} />
           </div>
         </div>
       </div>
 
-      {/* Second section tablet */}
+      {/* Contact section tablet */}
       <div className="bg-defaultGray100 h-[1512px] xs:hidden lg:hidden cm:flex flex-col pt-[70px] font-spaceMono">
         <h1 className="text-center xs:text-[23px] sm:text-[28px] md:text-[35px] cm:text-[45px] lg:text-[50px] xl:text-[60px]  text-black">
           Kontakt - Tablet
         </h1>
       </div>
 
-      {/* Second section desktop */}
+      {/* Contact section desktop */}
       <div className="bg-defaultGray100 h-[1712px] hidden lg:flex flex-col text-center pt-[70px] font-spaceMono">
         <h1 className="text-center xs:text-[23px] sm:text-[28px] md:text-[35px] cm:text-[45px] lg:text-[50px] xl:text-[60px]  text-black">
           Kontakt - Desktop
