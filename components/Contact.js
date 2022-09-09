@@ -1,6 +1,6 @@
-import React from "react";
+import Image from "next/image";
 
-function Contact() {
+export default function Contact(props) {
   return (
     <>
       {/* Contact section mobile */}
@@ -17,7 +17,7 @@ function Contact() {
             className="xs:block lg:hidden w-[312px] mt-[24px]"
           />
           <div className="w-[312px] mt-[24px]">
-            <h2 className="text-left xs:text-[24px] md:text-[35px]  text-extendedTrueGray900">
+            <h2 className="text-left xs:text-[24px] text-extendedTrueGray900">
               Tisdag-Fredag
             </h2>
             <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
@@ -35,7 +35,7 @@ function Contact() {
             <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
               414 60
             </p>
-            <p className="text-left xs:text-[20px]   text-extendedTrueGray500">
+            <p className="text-left xs:text-[20px] text-extendedTrueGray500">
               Göteborg
             </p>
             <h2 className="text-left xs:text-[24px] mt-[16px]  text-extendedTrueGray900">
@@ -54,7 +54,7 @@ function Contact() {
               Telefon
             </h2>
             <p className="text-left xs:text-[20px] mt-[8px]  text-extendedTrueGray500">
-              0763 414 000
+              {props.phoneNumber}
             </p>
           </div>
         </div>
@@ -76,5 +76,3 @@ function Contact() {
     </>
   );
 }
-
-export default Contact;

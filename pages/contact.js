@@ -1,7 +1,19 @@
 import Layout from "../components/Layout";
 import Contact from "../components/Contact";
 
-export default function contactPage() {
+import client from "../contentful";
+
+export async function getStaticProps() {
+  const res = await client.getEntries({ content_type: "contactDetails" });
+  return {
+    props: {
+      contactDetails: res.items,
+    },
+  };
+}
+
+export default function contactPage({ contactDetails }) {
+  // console.log(contactDetails[0].fields.phoneNumber);
   return (
     <>
       <Layout
@@ -10,7 +22,7 @@ export default function contactPage() {
           description: "Kontaktuppgifter",
         }}
       >
-        <Contact />
+        <Contact phoneNumber={contactDetails[0].fields.phoneNumber} />
       </Layout>
     </>
   );

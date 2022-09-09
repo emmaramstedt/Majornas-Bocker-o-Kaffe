@@ -1,22 +1,19 @@
-// Next Imports
 import Head from "next/head";
 import client from "../contentful";
 
-// Custom Imports
 import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 
 export async function getStaticProps() {
-  const res = await client.getEntries({ content_type: "testmodel" });
+  const res = await client.getEntries({ content_type: "contactDetails" });
   return {
     props: {
-      testmodels: res.items,
+      contactDetails: res.items,
     },
   };
 }
-
-export default function Home({ testmodels }) {
-  console.log(testmodels);
+export default function Home({ contactDetails }) {
+  // console.log(contactDetails);
   return (
     <Layout
       pageMeta={{
