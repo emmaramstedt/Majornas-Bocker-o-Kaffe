@@ -11,11 +11,14 @@ export default function Contact(props) {
               Kontakt
             </h1>
           </div>
-          <img
-            src="/images/contact/contact-hero-mobile.png"
-            alt="books"
-            className="xs:block lg:hidden w-[312px] mt-[24px]"
-          />
+          <div className="xs:block lg:hidden mt-[24px]">
+            <Image
+              src="/images/contact/contact-hero-mobile.png"
+              alt="Picture of the author"
+              width={312}
+              height={312}
+            />
+          </div>
           <div className="w-[312px] mt-[24px]">
             <h2 className="text-left xs:text-[24px] text-extendedTrueGray900">
               Tisdag-Fredag
