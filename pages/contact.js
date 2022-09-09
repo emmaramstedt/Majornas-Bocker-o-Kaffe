@@ -3,7 +3,7 @@ import client from "../contentful";
 
 // Custom Imports
 import Layout from "../components/Layout";
-import Contact from "../components/Contact";
+import Contact from "../components/contact/Contact";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "contactDetails" });

@@ -1,6 +1,6 @@
 // Custom Imports
 import Image from "next/image";
-import Details from "./contact/Details";
+import Details from "./Details";
 
 export default function Contact(props) {
   return (
