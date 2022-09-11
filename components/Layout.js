@@ -1,7 +1,7 @@
 // Next Imports
 import Head from "next/head";
 import { useRouter } from "next/router";
-
+import React, { useState, useEffect, ReactElement, Children } from "react";
 // Custom Imports
 import Footer from "./Footer";
 import Navbar from "../components/Navbar";
