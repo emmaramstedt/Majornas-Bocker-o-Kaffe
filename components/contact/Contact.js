@@ -15,10 +15,11 @@ import SocialMedia from "../../public/images/contact/social-media.svg";
 
 export default function Contact(props) {
   const adress = `${props.zipCode}, ${props.city}`;
+  const sendEmail = `mailto:${props.email}`;
   return (
     <>
       {/* Contact section mobile */}
-      <div className="bg-defaultGray100 h-[1476px] cm:hidden flex flex-col pt-[64px] font-spaceMono">
+      <div className="bg-defaultGray100  cm:hidden flex flex-col pt-[64px] font-spaceMono">
         <div className="flex justify-center items-center flex-col">
           <ContactTitle title="Kontakt" />
 
@@ -31,7 +32,7 @@ export default function Contact(props) {
                 height={62}
               />
             </div>
-            <div className="w-[312px] mt-[8px]">
+            <div className="w-[312px] mb-[24px]">
               <Details title="Tisdag-Fredag" text="11-18" />
               <Details title="Lördag" text="11-15" />
               <Details title="Söndag-Måndag" text="Stängt" />
@@ -40,14 +41,26 @@ export default function Contact(props) {
 
           <ContactSection>
             <div className="xs:block lg:hidden mt-[24px]">
-              <Image
-                src={AdressImage}
-                alt="Picture of the author"
-                width={313}
-                height={62}
-              />
+              <Image src={AdressImage} alt="adress" width={313} height={62} />
             </div>
             <Details title={props.streetAddress} text={adress} />
+            <div className="mb-[16px]"></div>
+            <Link
+              href="https://www.google.com/maps/place/Majornas+b%C3%B6cker+%26+kaffe/@57.696988,11.9304078,15z/data=!4m5!3m4!1s0x0:0xcabc91cd3263a328!8m2!3d57.696988!4d11.9304078"
+              passHref
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <a
+                target="_blank"
+                className="flex items-left justify-left w-full text-left mb-[24px] text-[18px] text-link"
+              >
+                <span className="mr-[10px] ">Klicka för karta</span>{" "}
+                <PositionIcon />
+              </a>
+            </Link>
           </ContactSection>
 
           <ContactSection>
@@ -60,10 +73,9 @@ export default function Contact(props) {
               />
             </div>
             <Details title="Instagram" text="@majornasbocker" />
-            <Details title="E-post" text={props.email} />
-            <Details title="Telefon" text={props.phoneNumber} />
+            <Details title="E-post" />
             <Link
-              href="https://www.google.com/maps/place/Majornas+b%C3%B6cker+%26+kaffe/@57.696988,11.9304078,15z/data=!4m5!3m4!1s0x0:0xcabc91cd3263a328!8m2!3d57.696988!4d11.9304078"
+              href={sendEmail}
               passHref
               smooth={true}
               offset={50}
@@ -72,13 +84,14 @@ export default function Contact(props) {
             >
               <a
                 target="_blank"
-                className="flex items-left justify-left w-full text-left  text-link"
+                className="flex items-left justify-left w-full text-left text-[18px] mb-[24px]  text-link"
               >
-                <span className=" ">Klicka för karta</span> <PositionIcon />
+                {props.email}
               </a>
             </Link>
+            <Details title="Telefon" text={props.phoneNumber} />
           </ContactSection>
-          <hr className="my-4 mx-auto w-[100%] h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
+          <hr className="mt-[71px] mx-auto w-[100%] h-[2px] bg-gray-100 rounded border-0 dark:bg-gray-700"></hr>
         </div>
       </div>
 
