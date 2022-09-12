@@ -35,9 +35,18 @@ export default function Contact(props) {
               />
             </div>
             <div className="w-[312px] mb-[24px]">
-              <Details title="Tisdag-Fredag" text="11-18" />
-              <Details title="Lördag" text="11-15" />
-              <Details title="Söndag-Måndag" text="Stängt" />
+              <Details
+                title={props.openingHoursTitle1}
+                text={props.openingHours1}
+              />
+              <Details
+                title={props.openingHoursTitle2}
+                text={props.openingHours2}
+              />
+              <Details
+                title={props.openingHoursTitle3}
+                text={props.openingHours3}
+              />
             </div>
           </ContactSection>
 
