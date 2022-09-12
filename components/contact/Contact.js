@@ -17,6 +17,7 @@ export default function Contact(props) {
   const adress = `${props.zipCode}, ${props.city}`;
   const sendEmail = `mailto:${props.email}`;
   const googleMaps = `${props.googleMaps}`;
+  const instagram = `${props.instagram}`;
   return (
     <>
       {/* Contact section mobile */}
@@ -73,7 +74,22 @@ export default function Contact(props) {
                 height={62}
               />
             </div>
-            <Details title="Instagram" text="@majornasbocker" />
+            <Details title="Instagram" />
+            <Link
+              href={instagram}
+              passHref
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <a
+                target="_blank"
+                className="flex items-left justify-left w-full text-left mb-[24px] text-[18px] text-link"
+              >
+                @majornasbocker
+              </a>
+            </Link>
             <Details title="E-post" />
             <Link
               href={sendEmail}
