@@ -1,11 +1,14 @@
 // Next Imports
 import Link from "next/link";
-
-// Custom Imports
 import Image from "next/image";
+
+// Custom Imports Components
 import Details from "./Details";
 import ContactTitle from "./ContactTitle";
 import ContactSection from "./ContactSection";
+import PositionIcon from "./PositionIcon";
+
+// Custom Imports Images
 import HeroImage from "../../public/images/contact/opening-hours.svg";
 import AdressImage from "../../public/images/contact/adress.svg";
 import SocialMedia from "../../public/images/contact/social-media.svg";
@@ -69,9 +72,9 @@ export default function Contact(props) {
             >
               <a
                 target="_blank"
-                className=" text-link hover:text-linkHover block text-base"
+                className="flex items-left justify-left w-full text-left  text-link"
               >
-                Klicka för karta 🏐
+                <span className=" ">Klicka för karta</span> <PositionIcon />
               </a>
             </Link>
           </ContactSection>
