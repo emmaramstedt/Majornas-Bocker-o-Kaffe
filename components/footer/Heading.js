@@ -1,7 +1,9 @@
 export default function Heading(props) {
   return (
     <div>
-      <h2>{props.footerTitle}</h2>
+      <h2 className='text-left xs:text-[24px] mt-[30px] text-extendedTrueGray900 font-spaceMono'>
+        {props.footerTitle}
+      </h2>
     </div>
   );
 }

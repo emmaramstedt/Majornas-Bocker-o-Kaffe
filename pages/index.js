@@ -62,7 +62,11 @@ export default function Home({ contactDetails, footer }) {
         }
         contact={
           <>
-            <Contact logo={InstagramLogo} text={footer[0].fields.instagram} />
+            <Contact
+              logo={InstagramLogo}
+              instaName={footer[0].fields.instagramName}
+              instaUrl={footer[0].fields.instagramUrl}
+            />
             <Contact logo={TelephoneLogo} text={footer[0].fields.phoneNumber} />
             <Contact logo={EmailLogo} text={footer[0].fields.email} />
           </>
