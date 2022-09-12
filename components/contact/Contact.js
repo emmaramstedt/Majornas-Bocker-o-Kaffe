@@ -1,6 +1,7 @@
 // Custom Imports
 import Image from "next/image";
 import Details from "./Details";
+import ContactTitle from "./ContactTitle";
 
 export default function Contact(props) {
   return (
@@ -8,11 +9,7 @@ export default function Contact(props) {
       {/* Contact section mobile */}
       <div className="bg-defaultGray100 h-[1476px] cm:hidden flex flex-col pt-[70px] font-spaceMono">
         <div className="flex justify-center items-center flex-col">
-          <div className="w-[312px] mt-[64px]">
-            <h1 className="text-left xs:text-[32px] md:text-[35px] text-black">
-              Kontakt
-            </h1>
-          </div>
+          <ContactTitle title="Kontakt" />
           <div className="xs:block lg:hidden mt-[24px]">
             <Image
               src="/images/contact/contact-hero-mobile.png"
