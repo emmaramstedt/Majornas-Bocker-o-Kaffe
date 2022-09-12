@@ -20,7 +20,7 @@ export default function Contact(props) {
   const instagram = `${props.instagram}`;
   return (
     <>
-      {/* Contact section mobile */}
+      {/* Contact Section Mobile */}
       <div className="bg-defaultGray100  cm:hidden flex flex-col pt-[64px] font-spaceMono">
         <div className="flex justify-center items-center flex-col">
           <ContactTitle title="Kontakt" />
@@ -108,7 +108,7 @@ export default function Contact(props) {
             </Link>
             <Details title="Telefon" text={props.phoneNumber} />
           </ContactSection>
-          <hr className="mt-[71px] mx-auto w-[100%] h-[2px] bg-gray-100 rounded border-0 dark:bg-gray-700"></hr>
+          <hr className="mt-[71px] mx-auto w-[100%] h-[2px] bg-gray-100  border-0 dark:bg-gray-700"></hr>
         </div>
       </div>
 
