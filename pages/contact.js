@@ -30,6 +30,7 @@ export default function contactPage({ contactDetails }) {
           city={contactDetails[0].fields.city}
           zipCode={contactDetails[0].fields.zipCode}
           streetAddress={contactDetails[0].fields.streetAddress}
+          googleMaps={contactDetails[0].fields.googleMaps}
         />
       </Layout>
     </>

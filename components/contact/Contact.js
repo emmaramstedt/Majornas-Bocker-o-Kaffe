@@ -16,6 +16,7 @@ import SocialMedia from "../../public/images/contact/social-media.svg";
 export default function Contact(props) {
   const adress = `${props.zipCode}, ${props.city}`;
   const sendEmail = `mailto:${props.email}`;
+  const googleMaps = `${props.googleMaps}`;
   return (
     <>
       {/* Contact section mobile */}
@@ -46,7 +47,7 @@ export default function Contact(props) {
             <Details title={props.streetAddress} text={adress} />
             <div className="mb-[16px]"></div>
             <Link
-              href="https://www.google.com/maps/place/Majornas+b%C3%B6cker+%26+kaffe/@57.696988,11.9304078,15z/data=!4m5!3m4!1s0x0:0xcabc91cd3263a328!8m2!3d57.696988!4d11.9304078"
+              href={googleMaps}
               passHref
               smooth={true}
               offset={50}
