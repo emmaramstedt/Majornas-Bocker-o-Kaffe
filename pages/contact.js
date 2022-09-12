@@ -27,6 +27,9 @@ export default function contactPage({ contactDetails }) {
         <Contact
           phoneNumber={contactDetails[0].fields.phoneNumber}
           email={contactDetails[0].fields.email}
+          city={contactDetails[0].fields.city}
+          zipCode={contactDetails[0].fields.zipCode}
+          streetAddress={contactDetails[0].fields.streetAddress}
         />
       </Layout>
     </>

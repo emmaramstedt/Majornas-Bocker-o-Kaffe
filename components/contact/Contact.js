@@ -1,34 +1,81 @@
+// Next Imports
+import Link from "next/link";
+
 // Custom Imports
 import Image from "next/image";
 import Details from "./Details";
 import ContactTitle from "./ContactTitle";
+import ContactSection from "./ContactSection";
+import HeroImage from "../../public/images/contact/opening-hours.svg";
+import AdressImage from "../../public/images/contact/adress.svg";
+import SocialMedia from "../../public/images/contact/social-media.svg";
 
 export default function Contact(props) {
+  const adress = `${props.zipCode}, ${props.city}`;
   return (
     <>
       {/* Contact section mobile */}
       <div className="bg-defaultGray100 h-[1476px] cm:hidden flex flex-col pt-[70px] font-spaceMono">
         <div className="flex justify-center items-center flex-col">
           <ContactTitle title="Kontakt" />
-          <div className="xs:block lg:hidden mt-[24px]">
-            <Image
-              src="/images/contact/contact-hero-mobile.png"
-              alt="Picture of the author"
-              width={312}
-              height={312}
-            />
-          </div>
-          <div className="w-[312px] mt-[8px]">
-            <Details title="Tisdag-Fredag" text="11-18" />
-            <Details title="Lördag" text="11-15" />
-            <Details title="Allmänna vägen 22" text="414 60" />
-            <p className="text-left xs:text-[20px] text-extendedTrueGray500">
-              Göteborg
-            </p>
+
+          <ContactSection>
+            <div className="xs:block lg:hidden mt-[24px]">
+              <Image
+                src={HeroImage}
+                alt="Picture of the author"
+                width={313}
+                height={62}
+              />
+            </div>
+            <div className="w-[312px] mt-[8px]">
+              <Details title="Tisdag-Fredag" text="11-18" />
+              <Details title="Lördag" text="11-15" />
+              <Details title="Söndag-Måndag" text="Stängt" />
+            </div>
+          </ContactSection>
+
+          <ContactSection>
+            <div className="xs:block lg:hidden mt-[24px]">
+              <Image
+                src={AdressImage}
+                alt="Picture of the author"
+                width={313}
+                height={62}
+              />
+            </div>
+            <Details title={props.streetAddress} text={adress} />
+          </ContactSection>
+
+          <ContactSection>
+            <div className="xs:block lg:hidden mt-[24px]">
+              <Image
+                src={SocialMedia}
+                alt="Picture of the author"
+                width={313}
+                height={62}
+              />
+            </div>
             <Details title="Instagram" text="@majornasbocker" />
             <Details title="E-post" text={props.email} />
             <Details title="Telefon" text={props.phoneNumber} />
-          </div>
+            <Link
+              href="https://www.google.com/maps/place/Majornas+b%C3%B6cker+%26+kaffe/@57.696988,11.9304078,15z/data=!4m5!3m4!1s0x0:0xcabc91cd3263a328!8m2!3d57.696988!4d11.9304078"
+              passHref
+              smooth={true}
+              offset={50}
+              duration={500}
+              className="cursor-pointer"
+            >
+              <a
+                target="_blank"
+                className=" text-link hover:text-linkHover block text-base"
+              >
+                Klicka för karta 🏐
+              </a>
+            </Link>
+          </ContactSection>
+          <hr className="my-4 mx-auto w-[100%] h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
         </div>
       </div>
 

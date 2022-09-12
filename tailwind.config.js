@@ -36,7 +36,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        link: "#2e6f78",
+        link: "#6A91F4",
+        linkHover: "#162ADE",
         cards: "#FCFCFD",
         heroBackground: "#FFFFFF",
         orangeColor: "#FEB273",
