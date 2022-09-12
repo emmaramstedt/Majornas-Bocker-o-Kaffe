@@ -1,8 +1,8 @@
-export default function OpeningHours(title, text) {
+export default function OpeningHours(props) {
   return (
     <div>
-      <h3>{title}</h3>
-      <p>{text}</p>
+      <h3>{props.title}</h3>
+      <p>{props.text}</p>
     </div>
   );
 }

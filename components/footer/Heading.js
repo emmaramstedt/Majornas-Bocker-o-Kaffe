@@ -1,7 +1,7 @@
-export default function Heading(footerTitle) {
+export default function Heading(props) {
   return (
     <div>
-      <h2>{footerTitle}</h2>
+      <h2>{props.footerTitle}</h2>
     </div>
   );
 }

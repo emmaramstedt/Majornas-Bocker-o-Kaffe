@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-export default function Contact(text, logo) {
+export default function Contact(props) {
   return (
     <div>
-      <Image src={logo} alt={text} />
-      <p>{text}</p>
+      <Image src={props.logo} alt={props.text} />
+      <p>{props.text}</p>
     </div>
   );
 }
