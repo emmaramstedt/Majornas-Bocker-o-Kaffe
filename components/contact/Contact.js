@@ -18,7 +18,7 @@ export default function Contact(props) {
   return (
     <>
       {/* Contact section mobile */}
-      <div className="bg-defaultGray100 h-[1476px] cm:hidden flex flex-col pt-[70px] font-spaceMono">
+      <div className="bg-defaultGray100 h-[1476px] cm:hidden flex flex-col pt-[64px] font-spaceMono">
         <div className="flex justify-center items-center flex-col">
           <ContactTitle title="Kontakt" />
 
