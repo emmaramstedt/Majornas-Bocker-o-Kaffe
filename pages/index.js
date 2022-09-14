@@ -25,6 +25,7 @@ export async function getStaticProps() {
     },
   };
 }
+
 export default function Home({ contactDetails, footer }) {
   console.log(footer);
   return (
@@ -71,14 +72,69 @@ export default function Home({ contactDetails, footer }) {
             <Contact logo={EmailLogo} text={footer[0].fields.email} />
           </>
         }
-        images={
-          <>
-            <Image src={FooterDecor} alt='Green shapes' />
-            <Image src={FooterDecor} alt='Green shapes' />
-            <Image src={FooterDecor} alt='Green shapes' />
-            <Image src={FooterDecor} alt='Green shapes' />
-            <Image src={FooterDecor} alt='Green shapes' />
-          </>
+        smallImages={
+          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+            <div className='h-1/5 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+            <div className='h-1/5 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+            <div className='h-1/5 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+            <div className='h-1/5 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+            <div className='h-1/5 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+          </div>
+        }
+        bigImages={
+          <div className='w-full h-full flex-col overflow-x-hidden'>
+            <div className='h-1/2 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+            <div className='h-1/2 w-screen'>
+              <Image
+                src={FooterDecor}
+                alt='Green shapes'
+                layout='responsive'
+                objectFit='cover'
+              />
+            </div>
+          </div>
         }
       />
     </Layout>

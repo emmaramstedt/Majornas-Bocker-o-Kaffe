@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Space Mono";
-  src: url("../public/fonts/SpaceMono-Regular.ttf");
+  font-family: 'Space Mono';
+  src: url('../public/fonts/SpaceMono-Regular.ttf');
 }
 
 html,

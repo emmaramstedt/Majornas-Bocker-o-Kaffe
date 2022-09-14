@@ -5,7 +5,12 @@ export default function Footer(props) {
         <div>{props.openingHours}</div>
         <div>{props.contact}</div>
       </div>
-      <div className='absolute max-w-max'>{props.images}</div>
+      <div className='absolute top-0 -z-10 left-0 h-full w-full xs:block md:hidden'>
+        {props.smallImages}
+      </div>
+      <div className='absolute top-0 -z-10 left-0 h-full w-full xs:hidden md:block'>
+        {props.bigImages}
+      </div>
     </footer>
   );
 }
