@@ -19,12 +19,23 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+nav ul li {
+  flex: 1;
+  transition: all 0.5s ease-out;
+}
+
+.navDot {
+  visibility: hidden;
+}
+
+.active a .navDot {
+  visibility: visible;
+  width: 20px;
+  height: 20px;
+  left: 398px;
+  top: 14px;
+  border-radius: 50%;
+  margin-left: 0.5em;
+  align-self: center;
+  background: #66ab8a;
 }

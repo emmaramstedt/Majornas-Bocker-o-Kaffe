@@ -24,18 +24,6 @@ export default function Home({ testmodels }) {
         description: "Hem",
       }}
     >
-     <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Majornas Böcker & Kaffe</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <p className="mt-3 text-2xl">check the console</p>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t"></footer>
-    </div>
       <HeroSection />
     </Layout>
   );
