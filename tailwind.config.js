@@ -8,10 +8,24 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       spaceMono: ["Space Mono", "cursive"],
+      nav: ["IBM Plex Mono"],
+    },
+    fontSize: {
+      xs: ".75rem",
+      sm: ".875rem",
+      tiny: ".875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "4rem",
+      "7xl": "5rem",
     },
     screens: {
       xs: "20px",
-      // => @media (min-width: 640px) { ... }
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }
@@ -36,7 +50,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        link: "#2e6f78",
+        link: "#6A91F4",
+        linkHover: "#162ADE",
         cards: "#FCFCFD",
         heroBackground: "#FFFFFF",
         orangeColor: "#FEB273",
