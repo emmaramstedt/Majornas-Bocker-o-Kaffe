@@ -29,7 +29,7 @@ function Navbar() {
           href="/kontakt"
         >
           <li className="flex justify-center items-center overflow-hidden h-full border-solid border border-[#111827] rounded-[64px] cursor-pointer">
-            <a href="/kontakt" className="flex">
+            <a className="flex">
               KONTAKT <div className="navDot"></div>
             </a>
           </li>
