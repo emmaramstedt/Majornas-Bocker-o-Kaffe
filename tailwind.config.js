@@ -6,7 +6,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Mulish", "system-ui"],
+      poppins: ["Poppins", "sans-serif"],
+      spaceMono: ["Space Mono", "cursive"],
       nav: ["IBM Plex Mono"],
     },
     fontSize: {
@@ -49,10 +50,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        link: "#2e6f78",
+        link: "#6A91F4",
+        linkHover: "#162ADE",
         cards: "#FCFCFD",
         heroBackground: "#FFFFFF",
         orangeColor: "#FEB273",
+        defaultGray100: "#F2F2F2",
+        extendedTrueGray500: "#737373",
+        extendedTrueGray900: "#171717",
       },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",

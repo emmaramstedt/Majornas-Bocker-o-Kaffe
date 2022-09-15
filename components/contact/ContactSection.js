@@ -1,0 +1,8 @@
+export default function ContactSection(props) {
+  return (
+    <>
+      <hr className="my-0 mx-auto w-[100%] h-[2px] bg-extendedTrueGray900 border-0 dark:bg-gray-700"></hr>
+      <div className="w-[312px] mt-[0px]">{props.children}</div>
+    </>
+  );
+}
