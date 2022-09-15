@@ -74,64 +74,64 @@ export default function Home({ contactDetails, footer }) {
         }
         smallImages={
           <div className='w-full h-full flex-col relative overflow-x-hidden'>
-            <div className='h-1/5 w-screen'>
+            <div className='h-1/5 w-full relative'>
               <Image
+                className='h-full absolute object-cover'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
-            <div className='h-1/5 w-screen'>
+            <div className='h-1/5 w-full relative'>
               <Image
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
-            <div className='h-1/5 w-screen'>
+            <div className='h-1/5 w-full relative'>
               <Image
+                className='h-full absolute object-cover'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
-            <div className='h-1/5 w-screen'>
+            <div className='h-1/5 w-full relative'>
               <Image
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
-            <div className='h-1/5 w-screen'>
+            <div className='h-1/5 w-full relative'>
               <Image
+                className='h-full absolute object-cover'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
           </div>
         }
         bigImages={
-          <div className='w-full h-full flex-col overflow-x-hidden'>
-            <div className='h-1/2 w-screen'>
+          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+            <div className='h-1/2 w-full relative'>
               <Image
+                className='h-full absolute object-cover'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
-            <div className='h-1/2 w-screen'>
+            <div className='h-1/2 w-full relative'>
               <Image
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
                 alt='Green shapes'
-                layout='responsive'
-                objectFit='cover'
+                layout='fill'
               />
             </div>
           </div>
