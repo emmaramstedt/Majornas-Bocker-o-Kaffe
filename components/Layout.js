@@ -4,7 +4,7 @@ import Head from "next/head";
 
 // Custom Imports
 import Footer from "./Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 const Layout = ({ children, pageMeta }) => {
   const router = useRouter();
