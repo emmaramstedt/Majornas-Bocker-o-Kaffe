@@ -16,7 +16,7 @@ function Navbar() {
         </ActiveLink>
         <ActiveLink
           activeClassName="active lg:flex-[2.5] lg:transition-all lg:duration-1000 ease-out"
-          href="gmap"
+          href="about"
         >
           <li className="flex justify-center items-center overflow-hidden h-full border-solid border border-[#111827] rounded-[64px] cursor-pointer">
             <a href="" className="flex">
