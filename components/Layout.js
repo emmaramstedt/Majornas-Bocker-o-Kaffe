@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 // Custom Imports
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 const Layout = ({ children, pageMeta }) => {
   const router = useRouter();

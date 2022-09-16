@@ -129,10 +129,114 @@ export default function Contact(props) {
       </div>
 
       {/* Contact section desktop */}
-      <div className="bg-defaultGray100 h-[1712px] hidden lg:flex flex-col text-center pt-[70px] font-spaceMono">
-        <h1 className="text-center xs:text-[23px] sm:text-[28px] md:text-[35px] cm:text-[45px] lg:text-[50px] xl:text-[60px]  text-black">
-          Kontakt - Desktop
-        </h1>
+      <div className="bg-defaultGray100 pb-[40px] hidden xl:flex flex-col text-center pt-[70px] font-spaceMono">
+        <ContactSection>
+          <div className="flex justify-center items-center mt-[40px] flex-row">
+            <div className=" flex justify-center flex-col">
+              <ContactTitle title="Kontakt" />
+              <p className="text-left text-extendedTrueGray500 xs:text-[18px] w-[296px] mb-[32px] mt-[4px] ">
+                Besök gärna mig i min butik, och tveka inte på att ställa
+                frågor.
+              </p>
+              <Image
+                src={OpeningHours}
+                alt="öppettider"
+                width={312}
+                height={62}
+              />
+              <div className=" mt-[24px] w-[312px] ">
+                <Details
+                  title={props.openingHoursTitle1}
+                  text={props.openingHours1}
+                />
+                <Details
+                  title={props.openingHoursTitle2}
+                  text={props.openingHours2}
+                />
+                <Details
+                  title={props.openingHoursTitle3}
+                  text={props.openingHours3}
+                />
+                <div className=" mb-[32px] "></div>
+              </div>
+              <Image
+                src={SocialMedia}
+                alt="Picture of the author"
+                width={312}
+                height={62}
+              />
+              <Details title="Instagram" />
+              <Link
+                href={instagram}
+                passHref
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
+                <a
+                  target="_blank"
+                  className="flex items-left justify-left w-full text-left text-[18px] text-link"
+                >
+                  @majornasbocker
+                </a>
+              </Link>
+              <Details title="E-post" />
+              <Link
+                href={sendEmail}
+                passHref
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="cursor-pointer"
+              >
+                <a
+                  target="_blank"
+                  className="flex items-left justify-left w-full text-left text-[18px] text-link"
+                >
+                  {props.email}
+                </a>
+              </Link>
+              <Details title="Telefon" text={props.phoneNumber} />
+            </div>
+            <div className=" w-[104px] "></div>
+            <div className=" flex justify-left items-left text-left flex-col ">
+              <div className=" h-[140px] "></div>
+
+              <div className=" mt-[0px] ">
+                <Image
+                  src={AdressRotated}
+                  alt="adress"
+                  width={312}
+                  height={62}
+                />
+                <Details title={props.streetAddress} text={adress} />
+                <div className="mb-[24px]"></div>
+                <Link
+                  href={googleMaps}
+                  passHref
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  className="cursor-pointer"
+                >
+                  <a
+                    target="_blank"
+                    className="flex items-left justify-left w-full text-left text-[18px] text-link"
+                  >
+                    <span className="mr-[10px] ">Klicka för karta</span>
+                    <PositionIcon />
+                  </a>
+                </Link>
+                <iframe
+                  src={googleMapsEmbedded}
+                  title="Google Maps"
+                  className=" mt-[48px] w-[608px] h-[446px] "
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </ContactSection>
       </div>
     </>
   );

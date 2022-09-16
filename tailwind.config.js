@@ -25,7 +25,8 @@ module.exports = {
       "7xl": "5rem",
     },
     screens: {
-      xs: "20px",
+      xs: "320px",
+      // => @media (min-width: 20px) { ... }
 
       sm: "640px",
       // => @media (min-width: 640px) { ... }
@@ -61,6 +62,15 @@ module.exports = {
       },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "translate(-10px)" },
+          "50%": { transform: "translate(20px)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 4s ease-in-out infinite",
       },
     },
   },

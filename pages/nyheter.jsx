@@ -3,7 +3,12 @@ import Layout from "../components/Layout";
 
 export default function About() {
   return (
-    <Layout>
+    <Layout
+      pageMeta={{
+        title: "Karta",
+        description: "Karta",
+      }}
+    >
       <AboutOffer />
     </Layout>
   );
