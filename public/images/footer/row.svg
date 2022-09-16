@@ -1,0 +1,12 @@
+<svg width="100%" viewBox="0 0 768 64" preserveAspectRatio="xMidYMid" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="160" cy="32" r="32" fill="#DFECE7"/>
+<circle cx="32" cy="32" r="32" fill="#EDF2F1"/>
+<circle cx="352" cy="32" r="32" fill="#D0E2DB"/>
+<circle cx="416" cy="32" r="32" fill="#EDF2F1"/>
+<circle cx="544" cy="32" r="32" fill="#D0E2DB"/>
+<rect x="448" width="64" height="64" fill="#DFECE7"/>
+<rect x="64" width="64" height="64" fill="#D0E2DB"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M256 0H224C206.327 0 192 14.3269 192 32V32C192 49.6731 206.327 64 224 64H256H288C305.673 64 320 49.6731 320 32V32C320 14.3269 305.673 0 288 0H256Z" fill="#EDF2F1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M704 0H672C654.327 0 640 14.3269 640 32V32C640 49.6731 654.327 64 672 64H704H736C753.673 64 768 49.6731 768 32V32C768 14.3269 753.673 0 736 0H704Z" fill="#D0E2DB"/>
+<rect x="576" width="64" height="64" fill="#EDF2F1"/>
+</svg>

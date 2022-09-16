@@ -1,5 +1,5 @@
-import Head from "next/head";
-import client from "../contentful";
+import Head from 'next/head';
+import client from '../contentful';
 
 import Layout from "../components/Layout";
 import Footer from "../components/footer/Footer";
@@ -17,22 +17,28 @@ import AboutWrapper from "../components/about/AboutWrapper";
 import AboutHeader from "../components/about/AboutHeader";
 import AboutContent from "../components/about/AboutContent";
 
+
+
 export async function getStaticProps() {
   const res = await client.getEntries({
-    content_type: "contactDetails",
-    content_type: "footer",
+    content_type: 'contactDetails',
+    content_type: 'footer',
+
   });
   return {
     props: {
       contactDetails: res.items,
+      footer: res.items,
     },
   };
 }
-export default function Home({ contactDetails }) {
-  // console.log(contactDetails);
+
+export default function Home({ contactDetails, footer }) {
+  console.log(footer);
   return (
     <Layout
       pageMeta={{
+
         title: "Majornas Böcker & Kaffe - Om Oss",
         description: "Om Oss - Majornas Böcker & Kaffe",
       }}
@@ -76,65 +82,65 @@ export default function Home({ contactDetails }) {
           </>
         }
         smallImages={
-          <div className="w-full h-full flex-col relative">
-            <div className="h-1/5 w-full relative">
+          <div className='w-full h-full flex-col relative'>
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
           </div>
         }
         bigImages={
-          <div className="w-full h-full flex-col relative overflow-x-hidden">
-            <div className="h-1/2 w-full relative">
+          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+            <div className='h-1/2 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/2 w-full relative">
+            <div className='h-1/2 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
           </div>
