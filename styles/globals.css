@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: "IBM Plex Mono";
@@ -12,17 +13,27 @@
   src: url("../public/fonts/IBMPlexMono-Bold.woff2") format("woff");
 }
 
-@tailwind utilities;
-
 @font-face {
-  font-family: 'Space Mono';
-  src: url('../public/fonts/SpaceMono-Regular.ttf');
+  font-family: "Space Mono";
+  src: url("../public/fonts/SpaceMono-Regular.ttf");
 }
-
+html {
+  background: #f3f4f6;
+  color: #171717;
+}
 html,
 body {
   padding: 0;
   margin: 0;
+}
+
+#__next {
+  max-width: 1920px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 28px;
 }
 
 a {
