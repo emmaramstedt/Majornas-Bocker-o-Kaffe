@@ -38,7 +38,13 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.active {
+  flex-grow: 2.5;
+}
+nav ul li {
+  flex-grow: 1;
+  font-family: "IBM Plex Mono";
+}
 .navDot {
   visibility: hidden;
 }
