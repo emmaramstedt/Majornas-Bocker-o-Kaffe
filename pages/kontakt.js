@@ -15,7 +15,7 @@ export async function getStaticProps() {
 }
 
 export default function contactPage({ contactDetails }) {
-  console.log(contactDetails[0].fields);
+  // console.log(contactDetails[0].fields);
   return (
     <>
       <Layout
