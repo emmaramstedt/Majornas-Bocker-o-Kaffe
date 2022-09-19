@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import NewsCard from "../components/news/newsCard";
+import NewsCard from "../components/news/NewsCard";
 import NewsHeader from "../components/news/NewsHeader";
 
 import client from "../contentful";
