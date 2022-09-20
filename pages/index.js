@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import client from '../contentful';
+import React from 'react';
 
 import Layout from '../components/Layout';
 import Footer from '../components/footer/Footer';
@@ -35,8 +36,42 @@ export async function getStaticProps() {
   };
 }
 
+export function captionLength(text) {
+  if (text.length >= 100) {
+    const dots = '...';
+    const slicedText = text.slice(0, 80).trimEnd();
+    return slicedText.concat(slicedText, dots);
+  }
+  return text;
+}
+
+let isMobile = true;
+
+const WidthOfWindow = () => {
+  const [width, setWidth] = React.useState(0);
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+    isMobile = window.innerWidth < 1024 ? true : false;
+  };
+  React.useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
+  }, []);
+  return isMobile;
+};
+
+export function numberOfImages(images) {
+  if (WidthOfWindow()) {
+    return images.slice(0, 4);
+  }
+  return images;
+}
+
 export default function Home({ contactDetails, footer, images }) {
-  console.log(footer);
+  console.log(images);
+  console.log(WidthOfWindow());
   return (
     <Layout
       pageMeta={{
@@ -53,11 +88,11 @@ export default function Home({ contactDetails, footer, images }) {
         <AboutContent content='Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter.' />
       </AboutWrapper>
       <div>
-        <div className='grid grid-cols-1 md:grid-cols-3 max-w-3xl px-4 sm:px-6 gap-3 mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-3xl px-4 sm:px-6 gap-6 mx-auto'>
           {images &&
-            images.map((image) => {
+            numberOfImages(images).map((image) => {
               return (
-                <div key={image.id}>
+                <div className='flex flex-col' key={image.id}>
                   <Image
                     className='object-cover aspect-square'
                     src={image.media_url}
@@ -65,6 +100,12 @@ export default function Home({ contactDetails, footer, images }) {
                     width={500}
                     height={500}
                   />
+                  <a
+                    className='font-nav text-base lg:text-lg'
+                    href={image.permalink}
+                  >
+                    {captionLength(image.caption)}
+                  </a>
                 </div>
               );
             })}
