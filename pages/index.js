@@ -94,7 +94,7 @@ export default function Home({ contactDetails, footer, images }) {
           {images &&
             numberOfImages(images).map((image) => {
               return (
-                <div className='flex flex-col' key={image.id}>
+                <div className='flex flex-col pt-10' key={image.id}>
                   <Image
                     className='object-cover aspect-square'
                     src={image.media_url}
@@ -103,7 +103,7 @@ export default function Home({ contactDetails, footer, images }) {
                     height={500}
                   />
                   <a
-                    className='font-nav text-base lg:text-lg'
+                    className='font-nav text-base lg:text-lg pt-2'
                     href={image.permalink}
                   >
                     {captionLength(image.caption)}
@@ -113,7 +113,7 @@ export default function Home({ contactDetails, footer, images }) {
             })}
         </div>
       </div>
-      <Footer
+      {/* <Footer
         openingHours={
           <>
             <Heading footerTitle={footer[0].fields.title} />
@@ -206,7 +206,7 @@ export default function Home({ contactDetails, footer, images }) {
             </div>
           </div>
         }
-      />
+      /> */}
     </Layout>
   );
 }
