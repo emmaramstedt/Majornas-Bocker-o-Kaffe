@@ -102,7 +102,7 @@ export default function Home({ contactDetails, footer, images }) {
                       height={500}
                     />
                     <a
-                      className='font-nav text-base lg:text-lg pt-2'
+                      className='font-ibmRegular text-base lg:text-lg pt-2'
                       href={image.permalink}
                     >
                       {captionLength(image.caption)}
