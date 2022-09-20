@@ -30,14 +30,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ contactDetails, footer }) {
-  console.log(footer);
   return (
-    <Layout
-      pageMeta={{
-        title: "Majornas Böcker & Kaffe - Om Oss",
-        description: "Om Oss - Majornas Böcker & Kaffe",
-      }}
-    >
+    <Layout>
       <main>
         <AboutWrapper>
           <AboutHeader
