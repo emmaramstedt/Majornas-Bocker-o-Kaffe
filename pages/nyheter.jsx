@@ -17,17 +17,15 @@ import TelephoneLogo from "../public/images/footer/telephone.svg";
 export async function getStaticProps() {
   const res = await client.getEntries({
     content_type: "contactDetails",
-    content_type: "footer",
   });
   return {
     props: {
       contactDetails: res.items,
-      footer: res.items,
     },
   };
 }
 
-export default function newsFeed({ footer }) {
+export default function newsFeed({ contactDetails }) {
   return (
     <>
       <Layout>
@@ -47,18 +45,18 @@ export default function newsFeed({ footer }) {
       <Footer
         openingHours={
           <>
-            <Heading footerTitle={footer[0].fields.title} />
+            <Heading footerTitle={contactDetails[0].fields.companyName} />
             <OpeningHours
-              title={footer[0].fields.openOneTitle}
-              text={footer[0].fields.openOneText}
+              title={contactDetails[0].fields.openOneTitle}
+              text={contactDetails[0].fields.openOneText}
             />
             <OpeningHours
-              title={footer[0].fields.openTwoTitle}
-              text={footer[0].fields.openTwoText}
+              title={contactDetails[0].fields.openTwoTitle}
+              text={contactDetails[0].fields.openTwoText}
             />
             <OpeningHours
-              title={footer[0].fields.openThreeTitle}
-              text={footer[0].fields.openThreeText}
+              title={contactDetails[0].fields.openThreeTitle}
+              text={contactDetails[0].fields.openThreeText}
             />
           </>
         }
@@ -66,11 +64,14 @@ export default function newsFeed({ footer }) {
           <>
             <Contact
               logo={InstagramLogo}
-              instaName={footer[0].fields.instagramName}
-              instaUrl={footer[0].fields.instagramUrl}
+              instaName={contactDetails[0].fields.instagramName}
+              instaUrl={contactDetails[0].fields.instagramUrl}
             />
-            <Contact logo={TelephoneLogo} text={footer[0].fields.phoneNumber} />
-            <Contact logo={EmailLogo} text={footer[0].fields.email} />
+            <Contact
+              logo={TelephoneLogo}
+              text={contactDetails[0].fields.phoneNumber}
+            />
+            <Contact logo={EmailLogo} text={contactDetails[0].fields.email} />
           </>
         }
         smallImages={
