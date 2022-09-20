@@ -6,9 +6,8 @@ const Layout = ({ children, pageMeta }) => {
   const router = useRouter();
 
   const meta = {
-    title: "Majornas böcker & kaffes",
-    description:
-      "This website offers second-hand housing for both private people",
+    title: "Majornas Böcker & Kaffe",
+    description: "En bokhandel i Majorna, Göteborg",
     type: "website",
     ...pageMeta,
   };
