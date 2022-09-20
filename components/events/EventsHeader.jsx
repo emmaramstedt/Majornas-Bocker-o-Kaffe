@@ -1,4 +1,4 @@
-export default function NewsHeader(props) {
+export default function EventsHeader(props) {
   return (
     <>
       <div className="font-spaceMono">
