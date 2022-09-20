@@ -24,9 +24,9 @@ export default function Contact(props) {
   return (
     <>
       {/* Contact Section Mobile */}
-      <div className="md:hidden flex flex-col pt-[64px] font-spaceMono">
+      <div className="md:hidden flex flex-col font-spaceMono">
         <div className="flex justify-center items-center flex-col">
-          <div className="mt-[40px] mb-[16px]">
+          <div className="mb-[16px]">
             <ContactTitle title="Kontakt" />
           </div>
 
@@ -127,12 +127,12 @@ export default function Contact(props) {
       </div>
 
       {/* Contact section tablet */}
-      <div className="xs:hidden xl:hidden md:flex flex-col pt-[70px] font-spaceMono">
+      <div className="xs:hidden xl:hidden md:flex flex-col font-spaceMono">
         <ContactSection>
-          <div className="flex justify-center items-center mt-[40px] flex-row">
+          <div className="flex justify-center items-center flex-row">
             <div className=" flex justify-center flex-col">
               <ContactTitle title="Kontakt" />
-              <p className="text-left text-extendedTrueGray500 xs:text-[18px] w-[296px] mb-[130px] mt-[4px] ">
+              <p className="text-left text-black xs:text-[18px] w-[296px] mb-[130px] mt-[4px] ">
                 Besök gärna mig i min butik, och tveka inte på att ställa
                 frågor.
               </p>
@@ -236,12 +236,12 @@ export default function Contact(props) {
       </div>
 
       {/* Contact section desktop */}
-      <div className="pb-[40px] hidden xl:flex flex-col text-center pt-[70px] font-spaceMono">
+      <div className="pb-[40px] hidden xl:flex flex-col text-center font-spaceMono">
         <ContactSection>
-          <div className="flex justify-center items-center mt-[40px] flex-row">
+          <div className="flex justify-center items-center flex-row">
             <div className=" flex justify-center flex-col">
               <ContactTitle title="Kontakt" />
-              <p className="text-left text-extendedTrueGray500 xs:text-[18px] w-[296px] mb-[32px] mt-[4px] ">
+              <p className="text-left text-black xs:text-[18px] w-[296px] mb-[32px] mt-[4px] ">
                 Besök gärna mig i min butik, och tveka inte på att ställa
                 frågor.
               </p>
