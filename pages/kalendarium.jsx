@@ -13,7 +13,7 @@ import InstagramLogo from "../public/images/footer/instagram.svg";
 import EmailLogo from "../public/images/footer/email.svg";
 import TelephoneLogo from "../public/images/footer/telephone.svg";
 
-import { UseState, UseEffect } from "react";
+import { useState, useEffect } from "react";
 
 export async function getStaticProps() {
   const res = await client.getEntries({
@@ -26,10 +26,10 @@ export async function getStaticProps() {
   };
 }
 
-export default function eventsFeed({ contactDetails }) {
-  const [companyItems, setCompanyItems] = UseState(null);
+export default function EventsFeed({ contactDetails }) {
+  const [companyItems, setCompanyItems] = useState(null);
 
-  UseEffect(() => {
+  useEffect(() => {
     client
       .getEntries({
         content_type: "contactDetails",
@@ -39,8 +39,8 @@ export default function eventsFeed({ contactDetails }) {
       });
   }, []);
 
-  const [bokcirkelItems, setBokcirkelItems] = UseState(null);
-  UseEffect(() => {
+  const [bokcirkelItems, setBokcirkelItems] = useState(null);
+  useEffect(() => {
     client
       .getEntries({
         content_type: "bokcirkel",
