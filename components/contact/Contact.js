@@ -19,7 +19,6 @@ export default function Contact(props) {
   const sendEmail = `mailto:${props.email}`;
   const googleMaps = `${props.googleMaps}`;
   const instagram = `${props.instagram}`;
-  const googleMapsEmbedded = `${props.googleMapsEmbedded}`;
 
   return (
     <>
@@ -61,22 +60,6 @@ export default function Contact(props) {
             </div>
             <Details title={props.streetAddress} text={adress} />
             <div className="mb-[16px]"></div>
-            <Link
-              href={googleMaps}
-              passHref
-              smooth={true}
-              offset={50}
-              duration={500}
-              className="cursor-pointer"
-            >
-              <a
-                target="_blank"
-                className="flex items-left justify-left w-full text-left mb-[24px] text-[18px] text-link"
-              >
-                <span className="mr-[10px] ">Klicka för karta</span>{" "}
-                <PositionIcon />
-              </a>
-            </Link>
           </ContactSection>
 
           <ContactSection>
@@ -206,29 +189,13 @@ export default function Contact(props) {
                 />
                 <Details title={props.streetAddress} text={adress} />
                 <div className="mb-[24px]"></div>
-                <Link
-                  href={googleMaps}
-                  passHref
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer"
-                >
-                  <a
-                    target="_blank"
-                    className="flex items-left justify-left w-full text-left text-[18px] text-link"
-                  >
-                    <span className="mr-[10px] ">Klicka för karta</span>{" "}
-                    <PositionIcon />
-                  </a>
-                </Link>
               </div>
             </div>
           </div>
         </ContactSection>
         <div className="flex justify-center items-center flex-col">
           <iframe
-            src={googleMapsEmbedded}
+            src={googleMaps}
             title="Google Maps"
             className=" mt-[30px] mb-[40px] w-[672px] h-[336px] "
           ></iframe>
@@ -319,24 +286,8 @@ export default function Contact(props) {
                 />
                 <Details title={props.streetAddress} text={adress} />
                 <div className="mb-[24px]"></div>
-                <Link
-                  href={googleMaps}
-                  passHref
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer"
-                >
-                  <a
-                    target="_blank"
-                    className="flex items-left justify-left w-full text-left text-[18px] text-link"
-                  >
-                    <span className="mr-[10px] ">Klicka för karta</span>{" "}
-                    <PositionIcon />
-                  </a>
-                </Link>
                 <iframe
-                  src={googleMapsEmbedded}
+                  src={googleMaps}
                   title="Google Maps"
                   className=" mt-[48px] w-[608px] h-[446px] "
                 ></iframe>
