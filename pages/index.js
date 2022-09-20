@@ -16,6 +16,7 @@ import AboutOffer from '../components/about/AboutOffer';
 import AboutWrapper from '../components/about/AboutWrapper';
 import AboutHeader from '../components/about/AboutHeader';
 import AboutContent from '../components/about/AboutContent';
+import Instagram from '../components/about/Instagram';
 
 export async function getStaticProps() {
   const res = await client.getEntries({
@@ -87,8 +88,9 @@ export default function Home({ contactDetails, footer, images }) {
         <AboutOffer />
         <AboutContent content='Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter.' />
       </AboutWrapper>
+      <Instagram />
       <div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-3xl px-4 sm:px-6 gap-6 mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xs:mx-[8%] md:mx-[6%] gap-6 md:gap-8 lg:gap-12 mx-auto'>
           {images &&
             numberOfImages(images).map((image) => {
               return (
