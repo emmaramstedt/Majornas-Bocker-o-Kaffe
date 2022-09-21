@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    loader: 'imgix',
-    path: '',
+    loader: "imgix",
+    path: "",
   },
 };
 
@@ -18,15 +18,15 @@ module.exports = {
     // limit of 50 domains values
     domains: [],
     // path prefix for Image Optimization API, useful with `loader`
-    path: '/_next/image',
+    path: "/_next/image",
     // loader can be 'default', 'imgix', 'cloudinary', 'akamai', or 'custom'
-    loader: 'default',
+    loader: "default",
     // disable static imports for image files
     disableStaticImages: false,
     // minimumCacheTTL is in seconds, must be integer 0 or more
     minimumCacheTTL: 60,
     // ordered list of acceptable optimized image formats (mime types)
-    formats: ['image/webp'],
+    formats: ["image/webp"],
     // enable dangerous use of SVG images
     dangerouslyAllowSVG: false,
     // set the Content-Security-Policy header
@@ -34,9 +34,9 @@ module.exports = {
     // limit of 50 objects
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**.cdninstagram.com',
-        pathname: '/v/**',
+        protocol: "https",
+        hostname: "**.cdninstagram.com",
+        pathname: "/v/**",
       },
     ],
     // when true, every image will be unoptimized

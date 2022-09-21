@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
-import NewsCard from "../components/news/NewsCard";
-import NewsHeader from "../components/news/NewsHeader";
-
+import EventsCard from "../components/events/EventsCard";
+import EventsHeader from "../components/events/EventsHeader";
 import client from "../contentful";
 import Image from "next/image";
 
@@ -14,6 +13,8 @@ import InstagramLogo from "../public/images/footer/instagram.svg";
 import EmailLogo from "../public/images/footer/email.svg";
 import TelephoneLogo from "../public/images/footer/telephone.svg";
 
+import { useState, useEffect } from "react";
+
 export async function getStaticProps() {
   const res = await client.getEntries({
     content_type: "contactDetails",
@@ -25,21 +26,54 @@ export async function getStaticProps() {
   };
 }
 
-export default function newsFeed({ contactDetails }) {
+export default function EventsFeed({ contactDetails }) {
+  const [companyItems, setCompanyItems] = useState(null);
+
+  useEffect(() => {
+    client
+      .getEntries({
+        content_type: "contactDetails",
+      })
+      .then((entries) => {
+        setCompanyItems(entries.items);
+      });
+  }, []);
+
+  const [bokcirkelItems, setBokcirkelItems] = useState(null);
+  useEffect(() => {
+    client
+      .getEntries({
+        content_type: "bokcirkel",
+        order: "-sys.createdAt",
+      })
+      .then((entries) => {
+        setBokcirkelItems(entries.items);
+      });
+  }, []);
   return (
     <>
       <Layout>
         <main>
-          <NewsHeader
+          <EventsHeader
             Header="Kommande nyheter & events"
             Content="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
             Button="Se tidigare event"
           />
-          <NewsCard
-            NewsCategory="Kategori"
-            NewsTitle="Sandra Grehn"
-            NewsContent="Vi som arbetar med våra kroppar"
-          />
+          {bokcirkelItems &&
+            bokcirkelItems.map((bokcirkel, i) => {
+              return (
+                <EventsCard
+                  key={i}
+                  EventCategory="Bokcirkel"
+                  EventTitle={bokcirkel.fields.title}
+                  EventContent={bokcirkel.fields.description}
+                  EventDate={bokcirkel.fields.date.substring(0, 10)}
+                  EventTime={bokcirkel.fields.date.substring(11)}
+                  EventLink={bokcirkel.fields.Link}
+                  EventLinkText={bokcirkel.fields.LinkText}
+                />
+              );
+            })}
         </main>
       </Layout>
       <Footer

@@ -10,10 +10,10 @@ function Navbar() {
             </a>
           </li>
         </ActiveLink>
-        <ActiveLink activeClassName='active' href='nyheter'>
-          <li className='flex justify-center items-center grow shrink basis-auto duration-[250ms] ease-[cubic-bezier(0.18, 0.89, 0.28, 1.08)] border-solid border border-[#111827] rounded-[64px] cursor-pointer'>
-            <a className='flex'>
-              NYHETER <div className='navDot'></div>
+        <ActiveLink activeClassName="active" href="kalendarium">
+          <li className="flex justify-center items-center grow shrink basis-auto duration-[250ms] ease-[cubic-bezier(0.18, 0.89, 0.28, 1.08)] border-solid border border-[#111827] rounded-[64px] cursor-pointer">
+            <a className="flex">
+              KALENDARIUM <div className="navDot"></div>
             </a>
           </li>
         </ActiveLink>
