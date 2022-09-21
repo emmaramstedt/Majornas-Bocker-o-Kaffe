@@ -18,23 +18,50 @@ export default function Form() {
 
   return (
     <>
-      <form onSubmit={handleOnSubmit}>
-        <p>
-          <label htmlFor="name">Name</label>
-          <input id="name" type="text" name="name" />
-        </p>
-        <p>
-          <label htmlFor="email">Email</label>
-          <input id="email" type="text" name="email" />
-        </p>
-        <p>
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" />
-        </p>
-        <p>
-          <button>Submit</button>
-        </p>
-      </form>
+      <div className="flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] border-[1px] border-black rounded-[16px] bg-white">
+        <form
+          onSubmit={handleOnSubmit}
+          className="grid grid-cols-1 gap-y-6 pl-[16px] "
+        >
+          <div className="xs:text-[18px]">
+            <label htmlFor="name">Namn</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder=" Oprah Winfrey"
+              required
+              className="xs:w-[280px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
+            />
+          </div>
+          <div className="xs:text-[18px]">
+            <label htmlFor="email">Mailadress</label>
+            <input
+              id="email"
+              type="text"
+              name="email"
+              placeholder=" Oprahwinfrey@yahoo.com"
+              required
+              className="xs:w-[280px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
+            />
+          </div>
+          <div className="xs:text-[18px]">
+            <label htmlFor="message">Meddelande</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder=" Hej, Jag letar efter en bok..."
+              required
+              className="xs:w-[280px] xs:h-[93px] mt-[4px] border-[1px] border-black rounded-[16px] xs:text-[12px]"
+            />
+          </div>
+          <div>
+            <button className="xs:w-[280px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue">
+              Skicka mail
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 }

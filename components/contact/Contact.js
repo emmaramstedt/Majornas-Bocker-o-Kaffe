@@ -28,87 +28,20 @@ export default function Contact(props) {
       {/* Contact Section Mobile */}
       <div className="md:hidden flex flex-col font-spaceMono">
         <div className="flex justify-center items-center flex-col">
-          <div className="mb-[16px]">
+          <div className="mb-[32px]">
             <ContactTitle title="Kontakt" />
+            <p className="text-left text-black xs:text-[18px] w-[296px] mt-[24px] ">
+              Besök gärna mig i min butik, och tveka inte på att ställa frågor.
+            </p>
           </div>
           <Form />
-          <ContactSection>
-            <div className="mt-[24px]">
-              <Image
-                src={OpeningHours}
-                alt="Picture of the author"
-                width={312}
-                height={62}
-              />
-            </div>
-            <div className="w-[312px] mb-[24px]">
-              <Details
-                title={props.openingHoursTitle1}
-                text={props.openingHours1}
-              />
-              <Details
-                title={props.openingHoursTitle2}
-                text={props.openingHours2}
-              />
-              <Details
-                title={props.openingHoursTitle3}
-                text={props.openingHours3}
-              />
-            </div>
-          </ContactSection>
-
-          <ContactSection>
-            <div className="mt-[24px]">
-              <Image src={AdressImage} alt="adress" width={312} height={62} />
-            </div>
-            <Details title={props.streetAddress} text={adress} />
-            <div className="mb-[16px]"></div>
-          </ContactSection>
-
-          <ContactSection>
-            <div className="mt-[24px]">
-              <Image
-                src={SocialMedia}
-                alt="Picture of the author"
-                width={312}
-                height={62}
-              />
-            </div>
-            <Details title="Instagram" />
-            <Link
-              href={instagram}
-              passHref
-              smooth={true}
-              offset={50}
-              duration={500}
-              className="cursor-pointer"
-            >
-              <a
-                target="_blank"
-                className="flex items-left justify-left w-full text-left mb-[24px] text-[18px] text-link"
-              >
-                @majornasbocker
-              </a>
-            </Link>
-            <Details title="E-post" />
-            <Link
-              href={sendEmail}
-              passHref
-              smooth={true}
-              offset={50}
-              duration={500}
-              className="cursor-pointer"
-            >
-              <a
-                target="_blank"
-                className="flex items-left justify-left w-full text-left text-[18px] mb-[24px]  text-link"
-              >
-                {props.email}
-              </a>
-            </Link>
-            <Details title="Telefon" text={props.phoneNumber} />
-          </ContactSection>
-          <hr className="mt-[71px] mx-auto w-[100%] h-[2px] bg-gray-100  border-0 dark:bg-gray-700"></hr>
+          <div className="flex justify-center items-center flex-col">
+            <iframe
+              src={googleMaps}
+              title="Google Maps"
+              className=" mt-[52px] mb-[40px] w-[312px] h-[230px] "
+            ></iframe>
+          </div>
         </div>
       </div>
 
