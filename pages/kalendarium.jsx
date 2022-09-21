@@ -27,27 +27,15 @@ export async function getStaticProps() {
 }
 
 export default function EventsFeed({ contactDetails }) {
-  const [companyItems, setCompanyItems] = useState(null);
-
+  const [evenemangItems, setEvenemangItems] = useState(null);
   useEffect(() => {
     client
       .getEntries({
-        content_type: "contactDetails",
+        content_type: "evenemang",
+        order: "-fields.date",
       })
       .then((entries) => {
-        setCompanyItems(entries.items);
-      });
-  }, []);
-
-  const [bokcirkelItems, setBokcirkelItems] = useState(null);
-  useEffect(() => {
-    client
-      .getEntries({
-        content_type: "bokcirkel",
-        order: "-sys.createdAt",
-      })
-      .then((entries) => {
-        setBokcirkelItems(entries.items);
+        setEvenemangItems(entries.items);
       });
   }, []);
   return (
@@ -55,22 +43,22 @@ export default function EventsFeed({ contactDetails }) {
       <Layout>
         <main>
           <EventsHeader
-            Header="Kommande nyheter & events"
-            Content="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
-            Button="Se tidigare event"
+            EventHeaderTitle="Kommande nyheter & events"
+            EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
+            EventHeaderButton="Visa fler"
           />
-          {bokcirkelItems &&
-            bokcirkelItems.map((bokcirkel, i) => {
+          {evenemangItems &&
+            evenemangItems.map((event, i) => {
               return (
                 <EventsCard
                   key={i}
-                  EventCategory="Bokcirkel"
-                  EventTitle={bokcirkel.fields.title}
-                  EventContent={bokcirkel.fields.description}
-                  EventDate={bokcirkel.fields.date.substring(0, 10)}
-                  EventTime={bokcirkel.fields.date.substring(11)}
-                  EventLink={bokcirkel.fields.Link}
-                  EventLinkText={bokcirkel.fields.LinkText}
+                  EventCategory={event.fields.category}
+                  EventTitle={event.fields.title}
+                  EventContent={event.fields.description}
+                  EventDate={event.fields.date.substring(0, 10)}
+                  EventTime={event.fields.date.substring(11)}
+                  EventLink={event.fields.Link}
+                  EventLinkText={event.fields.LinkText}
                 />
               );
             })}
