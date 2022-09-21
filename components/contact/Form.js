@@ -18,10 +18,10 @@ export default function Form() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] border-[1px] border-black rounded-[16px] bg-white">
+      <div className="flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white">
         <form
           onSubmit={handleOnSubmit}
-          className="grid grid-cols-1 gap-y-6 pl-[16px] "
+          className="grid grid-cols-1 xs:gap-y-6 xs:pl-[16px] md:pl-[32px]"
         >
           <div className="xs:text-[18px]">
             <label htmlFor="name">Namn</label>
@@ -31,7 +31,7 @@ export default function Form() {
               name="name"
               placeholder=" Oprah Winfrey"
               required
-              className="xs:w-[280px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
+              className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
             />
           </div>
           <div className="xs:text-[18px]">
@@ -42,7 +42,7 @@ export default function Form() {
               name="email"
               placeholder=" Oprahwinfrey@yahoo.com"
               required
-              className="xs:w-[280px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
+              className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px]"
             />
           </div>
           <div className="xs:text-[18px]">
@@ -52,11 +52,11 @@ export default function Form() {
               name="message"
               placeholder=" Hej, Jag letar efter en bok..."
               required
-              className="xs:w-[280px] xs:h-[93px] mt-[4px] border-[1px] border-black rounded-[16px] xs:text-[12px]"
+              className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[93px] mt-[4px] border-[1px] border-black rounded-[16px] xs:text-[12px]"
             />
           </div>
           <div>
-            <button className="xs:w-[280px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue">
+            <button className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue">
               Skicka mail
             </button>
           </div>
