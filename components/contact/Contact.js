@@ -14,6 +14,9 @@ import AdressImage from "../../public/images/contact/adress.svg";
 import AdressRotated from "../../public/images/contact/adress-rotated.svg";
 import SocialMedia from "../../public/images/contact/social-media.svg";
 
+// Test
+import Form from "./Form";
+
 export default function Contact(props) {
   const adress = `${props.zipCode}, ${props.city}`;
   const sendEmail = `mailto:${props.email}`;
@@ -28,7 +31,7 @@ export default function Contact(props) {
           <div className="mb-[16px]">
             <ContactTitle title="Kontakt" />
           </div>
-
+          <Form />
           <ContactSection>
             <div className="mt-[24px]">
               <Image
