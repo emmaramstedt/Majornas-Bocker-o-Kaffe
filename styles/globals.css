@@ -106,3 +106,20 @@ nav ul li {
 .Evenemang div .eventDecoThree {
   background: #ffe7aa;
 }
+
+.eventsWrapper {
+  grid-template-columns: fit-content(1fr) fit-content(1fr);
+  grid-template-rows: fit-content(100px) fit-content(100px);
+}
+
+.eventsHeader {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.eventsButtonWrapper {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.eventsCardsWrapper {
+  grid-area: 1 / 2 / 3 / 3;
+}
