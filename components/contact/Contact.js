@@ -8,7 +8,7 @@ export default function Contact(props) {
   return (
     <>
       {/* Contact Mobile */}
-      <div className="md:hidden flex flex-col font-spaceMono">
+      <div className="md:hidden flex flex-col font-ibmRegular">
         <div className="flex justify-center items-center flex-col">
           <div className="mb-[32px]">
             <ContactTitle title="Kontakt" />
@@ -29,7 +29,7 @@ export default function Contact(props) {
       </div>
 
       {/* Contact Tablet */}
-      <div className="xs:hidden xl:hidden md:flex flex-col justify-center items-center font-spaceMono">
+      <div className="xs:hidden xl:hidden md:flex flex-col justify-center items-center font-ibmRegular">
         <div className="w-[680px] ">
           <ContactTitle title="Kontakt" />
           <p className="text-left text-black xs:text-[18px] w-[400px] mt-[16px] ">
@@ -51,7 +51,7 @@ export default function Contact(props) {
       </div>
 
       {/* Contact section desktop */}
-      <div className="hidden xl:flex flex-col justify-center items-center font-spaceMono">
+      <div className="hidden xl:flex flex-col justify-center items-center font-ibmRegular">
         <div className="w-[1024px]">
           <ContactTitle title="Kontakt" />
           <p className="text-left text-black xs:text-[18px] w-[400px] mt-[16px] ">
