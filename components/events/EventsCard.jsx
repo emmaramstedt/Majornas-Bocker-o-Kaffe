@@ -14,9 +14,7 @@ const EventsCard = (props) => {
             <div>
               <h2 className="font-ibmBold">{props.EventTitle}</h2>
             </div>
-            <div>
-              {props.EventContent} {props.EventLinkText}
-            </div>
+            <div>{props.EventContent}</div>
             <div>
               {props.EventDate} - {props.EventTime}
             </div>

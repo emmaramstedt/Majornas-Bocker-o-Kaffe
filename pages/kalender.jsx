@@ -36,12 +36,13 @@ export default function EventsFeed({ contactDetails }) {
       .getEntries({
         content_type: "evenemang",
         order: "-fields.date",
+        limit: 5,
       })
       .then((entries) => {
         setEvenemangItems(entries.items);
       });
   }, []);
-  console.log(evenemangItems);
+
   return (
     <>
       <Layout>
