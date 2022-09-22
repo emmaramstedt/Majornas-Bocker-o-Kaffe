@@ -2,18 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: "IBM Plex Mono";
   font-weight: 400;
-  src: url('../public/fonts/IBMPlexMono-Regular.woff2') format('woff2');
+  src: url("../public/fonts/IBMPlexMono-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: 'IBM Plex Bold';
+  font-family: "IBM Plex Bold";
   font-weight: 700;
-  src: url('../public/fonts/IBMPlexMono-Bold.woff2') format('woff2');
+  src: url("../public/fonts/IBMPlexMono-Bold.woff2") format("woff2");
 }
 @font-face {
-  font-family: 'Space Mono';
-  src: url('../public/fonts/SpaceMono-Regular.ttf');
+  font-family: "Space Mono";
+  src: url("../public/fonts/SpaceMono-Regular.ttf");
 }
 html {
   background: #f3f4f6;
@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'hej';
+  font-family: "hej";
 }
 a {
   color: inherit;
@@ -69,4 +69,40 @@ nav ul li {
   margin-left: 0.5em;
   align-self: center;
   background: #66ab8a;
+}
+
+.Bokcirkel div .eventDecoOne {
+  background: #ffb7bb;
+}
+
+.Bokcirkel div .eventDecoTwo {
+  background: #ff8087;
+}
+
+.Bokcirkel div .eventDecoThree {
+  background: #ff8087;
+}
+
+.Författarkväll div .eventDecoOne {
+  background: #d9eae1;
+}
+
+.Författarkväll div .eventDecoTwo {
+  background: #66ab8a;
+}
+
+.Författarkväll div .eventDecoThree {
+  background: #d9eae1;
+}
+
+.Evenemang div .eventDecoOne {
+  background: #ffe7aa;
+}
+
+.Evenemang div .eventDecoTwo {
+  background: #ffdd85;
+}
+
+.Evenemang div .eventDecoThree {
+  background: #ffe7aa;
 }

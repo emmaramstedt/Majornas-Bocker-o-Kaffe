@@ -1,12 +1,11 @@
 export default function EventsHeader(props) {
   return (
     <>
-      <div className="font-spaceMono">
-        <h1>{props.Header}</h1>
+      <div className="font-spaceMono mb-[36px] max-w-[312px]">
+        <h1>{props.EventHeaderTitle}</h1>
         <div>
-          <p>{props.Content}</p>
+          <p>{props.EventHeaderContent}</p>
         </div>
-        <button type="button">{props.Button}</button>
       </div>
     </>
   );
