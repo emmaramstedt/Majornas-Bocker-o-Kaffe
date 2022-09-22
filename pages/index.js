@@ -35,15 +35,6 @@ export async function getStaticProps() {
   };
 }
 
-export function captionLength(text) {
-  if (text.length >= 100) {
-    const dots = '...';
-    const slicedText = text.slice(0, 80).trimEnd();
-    return slicedText.concat(slicedText, dots);
-  }
-  return text;
-}
-
 let isMobile = true;
 
 const WidthOfWindow = () => {
@@ -94,19 +85,18 @@ export default function Home({ contactDetails, footer, images }) {
               numberOfImages(images).map((image) => {
                 return (
                   <div className='flex flex-col pt-10' key={image.id}>
-                    <Image
-                      className='object-cover aspect-square'
-                      src={image.media_url}
-                      alt={image.caption}
-                      width={500}
-                      height={500}
-                    />
-                    <a
-                      className='font-ibmRegular text-base lg:text-lg pt-2'
-                      href={image.permalink}
-                    >
-                      {captionLength(image.caption)}
+                    <a href={image.permalink} target='_blank' rel='noreferrer'>
+                      <Image
+                        className='object-cover aspect-square'
+                        src={image.media_url}
+                        alt={image.caption}
+                        width={500}
+                        height={500}
+                      />
                     </a>
+                    <p className='font-ibmRegular text-base lg:text-lg pt-2'>
+                      {image.caption}
+                    </p>
                   </div>
                 );
               })}
