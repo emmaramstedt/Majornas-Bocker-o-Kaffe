@@ -1,7 +1,7 @@
 export default function EventsButton(props) {
   return (
     <div className="eventsButtonWrapper h-fit">
-      <button className="rounded border-solid bg-red-400 max-w-fit max-h-[45px] p-6">
+      <button className="border-solid border border-[#111827] rounded-full cursor-pointer bg-[#f3f4f6] py-[12px] px-[22px]">
         {props.EventsButtonText}
       </button>
     </div>

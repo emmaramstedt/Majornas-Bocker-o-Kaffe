@@ -41,6 +41,7 @@ export default function EventsFeed({ contactDetails }) {
         setEvenemangItems(entries.items);
       });
   }, []);
+  console.log(evenemangItems);
   return (
     <>
       <Layout>
@@ -50,7 +51,7 @@ export default function EventsFeed({ contactDetails }) {
               EventHeaderTitle="Kommande nyheter & events"
               EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
             />
-            <EventsButton EventsButtonText="hej" />
+            <EventsButton EventsButtonText="Visa fler" />
             <EventsCardsWrapper>
               {evenemangItems &&
                 evenemangItems.map((event, i) => {
@@ -62,8 +63,8 @@ export default function EventsFeed({ contactDetails }) {
                       EventContent={event.fields.description}
                       EventDate={event.fields.date.substring(0, 10)}
                       EventTime={event.fields.date.substring(11)}
-                      EventLink={event.fields.Link}
-                      EventLinkText={event.fields.LinkText}
+                      EventLink={event.fields.link}
+                      EventLinkText={event.fields.linkText}
                     />
                   );
                 })}
