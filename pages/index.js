@@ -35,7 +35,7 @@ export async function getStaticProps() {
   };
 }
 
-let isMobile = true;
+let isMobile = false;
 
 const WidthOfWindow = () => {
   const [width, setWidth] = React.useState(0);
@@ -59,7 +59,7 @@ export function numberOfImages(images) {
   return images;
 }
 
-export default function Home({ contactDetails, footer, images }) {
+export default function Home({ contactDetails, images }) {
   console.log(images);
   console.log(WidthOfWindow());
   return (
