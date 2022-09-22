@@ -1,7 +1,7 @@
 const EventsCard = (props) => {
   return (
     <>
-      <div className="max-w-[313px] border-solid border border-[#111827] rounded-t-lg">
+      <div className="max-w-[313px] border-solid border border-[#111827] rounded-t-lg mb-[32px]">
         <div className={props.EventCategory}>
           <div className="h-[63px] flex">
             <div className="w-[100%] eventDecoOne rounded-tl-lg flex justify-center items-center">
