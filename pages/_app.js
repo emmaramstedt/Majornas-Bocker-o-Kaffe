@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 
-function MyApp({ Component, pageProps, footer }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar />
