@@ -39,7 +39,6 @@ export default function contactPage({ contactDetails }) {
             openingHoursTitle1={contactDetails[0].fields.openingHoursTitle1}
             openingHoursTitle2={contactDetails[0].fields.openingHoursTitle2}
             openingHoursTitle3={contactDetails[0].fields.openingHoursTitle3}
-            googleMapsEmbedded={contactDetails[0].fields.googleMapsEmbedded}
           />
         </main>
       </Layout>
