@@ -76,7 +76,7 @@ export default function Home({ contactDetails, images }) {
         <AboutWrapper>
           <AboutHeader
             title='Majornas Böcker & Kaffe'
-            content='En trivsam bokhandel där man kan botanisera bland böcker, eller slå sig ner med en espresso och dagstidningen.'
+            content='En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen.'
           />
           <AboutOffer />
           <AboutContent content='Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter.' />

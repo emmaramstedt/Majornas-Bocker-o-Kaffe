@@ -50,8 +50,8 @@ export default function EventsFeed({ contactDetails }) {
         <main>
           <EventsWrapper>
             <EventsHeader
-              EventHeaderTitle='Kommande nyheter & events'
-              EventHeaderContent='Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln.'
+              EventHeaderTitle='Evenemangskalender'
+              EventHeaderContent='Vi anordnar regelbundet bokcirklar, evenemang och författarkvällar med uppmärksammade och intressanta författare.'
             />
             <EventsButton EventsButtonText='hej' />
             <EventsCardsWrapper>
