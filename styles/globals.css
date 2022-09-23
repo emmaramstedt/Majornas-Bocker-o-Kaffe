@@ -158,3 +158,11 @@ nav ul li {
     justify-content: space-between;
   }
 }
+
+.isHidden {
+  visibility: hidden;
+}
+
+.isVisible {
+  visibility: visible;
+}

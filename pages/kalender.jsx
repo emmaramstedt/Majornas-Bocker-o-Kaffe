@@ -28,7 +28,6 @@ export async function getStaticProps() {
     },
   };
 }
-
 export default function EventsFeed({ contactDetails }) {
   const [evenemangItems, setEvenemangItems] = useState(null);
   useEffect(() => {
@@ -36,13 +35,12 @@ export default function EventsFeed({ contactDetails }) {
       .getEntries({
         content_type: "evenemang",
         order: "-fields.date",
-        limit: 5,
       })
       .then((entries) => {
         setEvenemangItems(entries.items);
       });
   }, []);
-
+  const [isActive, setIsActive] = useState(false);
   return (
     <>
       <Layout>
@@ -52,7 +50,11 @@ export default function EventsFeed({ contactDetails }) {
               EventHeaderTitle="Kommande nyheter & events"
               EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
             />
-            <EventsButton EventsButtonText="Visa fler" />
+            <EventsButton
+              EventsButtonText="Visa fler"
+              setIsActive={setIsActive}
+              isActive={isActive}
+            />
             <EventsCardsWrapper>
               {evenemangItems &&
                 evenemangItems.map((event, i) => {
@@ -66,6 +68,7 @@ export default function EventsFeed({ contactDetails }) {
                       EventTime={event.fields.date.substring(11)}
                       EventLink={event.fields.link}
                       EventLinkText={event.fields.linkText}
+                      isActive={isActive}
                     />
                   );
                 })}
