@@ -1,26 +1,28 @@
-import Layout from "../components/Layout";
-import EventsCard from "../components/events/EventsCard";
-import EventsHeader from "../components/events/EventsHeader";
-import client from "../contentful";
-import Image from "next/image";
+import Layout from '../components/Layout';
+import EventsCard from '../components/events/EventsCard';
+import EventsHeader from '../components/events/EventsHeader';
+import client from '../contentful';
+import Image from 'next/image';
 
-import Footer from "../components/footer/Footer";
-import Heading from "../components/footer/Heading";
-import OpeningHours from "../components/footer/OpeningHours";
-import Contact from "../components/footer/Contact";
-import FooterDecor from "../public/images/footer/row.svg";
-import InstagramLogo from "../public/images/footer/instagram.svg";
-import EmailLogo from "../public/images/footer/email.svg";
-import TelephoneLogo from "../public/images/footer/telephone.svg";
+import Footer from '../components/footer/Footer';
+import Heading from '../components/footer/Heading';
+import OpeningHours from '../components/footer/OpeningHours';
+import ContactInsta from '../components/footer/ContactInsta';
+import ContactPhone from '../components/footer/ContactPhone';
+import ContactEmail from '../components/footer/ContactEmail';
+import FooterDecor from '../public/images/footer/row.svg';
+import InstagramLogo from '../public/images/footer/instagram.svg';
+import EmailLogo from '../public/images/footer/email.svg';
+import TelephoneLogo from '../public/images/footer/telephone.svg';
 
-import { useState, useEffect } from "react";
-import EventsButton from "../components/events/EventsButton";
-import EventsWrapper from "../components/events/EventsWrapper";
-import EventsCardsWrapper from "../components/events/EventsCardsWrapper";
+import { useState, useEffect } from 'react';
+import EventsButton from '../components/events/EventsButton';
+import EventsWrapper from '../components/events/EventsWrapper';
+import EventsCardsWrapper from '../components/events/EventsCardsWrapper';
 
 export async function getStaticProps() {
   const res = await client.getEntries({
-    content_type: "contactDetails",
+    content_type: 'contactDetails',
   });
   return {
     props: {
@@ -34,8 +36,8 @@ export default function EventsFeed({ contactDetails }) {
   useEffect(() => {
     client
       .getEntries({
-        content_type: "evenemang",
-        order: "-fields.date",
+        content_type: 'evenemang',
+        order: '-fields.date',
       })
       .then((entries) => {
         setEvenemangItems(entries.items);
@@ -47,10 +49,10 @@ export default function EventsFeed({ contactDetails }) {
         <main>
           <EventsWrapper>
             <EventsHeader
-              EventHeaderTitle="Kommande nyheter & events"
-              EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
+              EventHeaderTitle='Kommande nyheter & events'
+              EventHeaderContent='Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln.'
             />
-            <EventsButton EventsButtonText="hej" />
+            <EventsButton EventsButtonText='hej' />
             <EventsCardsWrapper>
               {evenemangItems &&
                 evenemangItems.map((event, i) => {
@@ -91,78 +93,81 @@ export default function EventsFeed({ contactDetails }) {
         }
         contact={
           <>
-            <Contact
+            <ContactInsta
               logo={InstagramLogo}
               instaName={contactDetails[0].fields.instagramName}
               instaUrl={contactDetails[0].fields.instagramUrl}
             />
-            <Contact
+            <ContactPhone
               logo={TelephoneLogo}
               text={contactDetails[0].fields.phoneNumber}
             />
-            <Contact logo={EmailLogo} text={contactDetails[0].fields.email} />
+            <ContactEmail
+              logo={EmailLogo}
+              text={contactDetails[0].fields.email}
+            />
           </>
         }
         smallImages={
-          <div className="w-full h-full flex-col relative">
-            <div className="h-1/5 w-full relative">
+          <div className='w-full h-full flex-col relative'>
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/5 w-full relative">
+            <div className='h-1/5 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
           </div>
         }
         bigImages={
-          <div className="w-full h-full flex-col relative overflow-x-hidden">
-            <div className="h-1/2 w-full relative">
+          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+            <div className='h-1/2 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggle'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
-            <div className="h-1/2 w-full relative">
+            <div className='h-1/2 w-full relative'>
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover -scale-x-100'
                 src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
           </div>

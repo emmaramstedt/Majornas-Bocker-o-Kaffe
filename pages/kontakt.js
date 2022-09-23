@@ -9,7 +9,9 @@ import Image from 'next/image';
 import Footer from '../components/footer/Footer';
 import Heading from '../components/footer/Heading';
 import OpeningHours from '../components/footer/OpeningHours';
-import ContactFooter from '../components/footer/Contact';
+import ContactInsta from '../components/footer/ContactInsta';
+import ContactPhone from '../components/footer/ContactPhone';
+import ContactEmail from '../components/footer/ContactEmail';
 import FooterDecor from '../public/images/footer/row.svg';
 import InstagramLogo from '../public/images/footer/instagram.svg';
 import EmailLogo from '../public/images/footer/email.svg';
@@ -71,16 +73,16 @@ export default function contactPage({ contactDetails }) {
         }
         contact={
           <>
-            <ContactFooter
+            <ContactInsta
               logo={InstagramLogo}
               instaName={contactDetails[0].fields.instagramName}
               instaUrl={contactDetails[0].fields.instagramUrl}
             />
-            <ContactFooter
+            <ContactPhone
               logo={TelephoneLogo}
               text={contactDetails[0].fields.phoneNumber}
             />
-            <ContactFooter
+            <ContactEmail
               logo={EmailLogo}
               text={contactDetails[0].fields.email}
             />

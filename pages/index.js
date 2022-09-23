@@ -185,10 +185,10 @@ export default function Home({ contactDetails, images }) {
           </div>
         }
         bigImages={
-          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+          <div className='w-full h-full flex-col relative'>
             <div className='h-1/2 w-full relative'>
               <Image
-                className='h-full absolute object-cover animate-wiggle'
+                className='h-full absolute object-cover animate-wiggle overflow-visible'
                 src={FooterDecor}
                 alt='Green shapes'
                 layout='fill'
