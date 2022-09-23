@@ -69,7 +69,7 @@ export default function Home({ contactDetails, images }) {
         description: "Om Oss - Majornas Böcker & Kaffe",
       }}
     >
-      <main>
+      <main className="mt-[80px]">
         <AboutWrapper>
           <AboutHeader
             title="Majornas Böcker & Kaffe"
