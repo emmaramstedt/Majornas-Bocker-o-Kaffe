@@ -6,7 +6,9 @@ import Layout from '../components/Layout';
 import Footer from '../components/footer/Footer';
 import Heading from '../components/footer/Heading';
 import OpeningHours from '../components/footer/OpeningHours';
-import Contact from '../components/footer/Contact';
+import ContactInsta from '../components/footer/ContactInsta';
+import ContactPhone from '../components/footer/ContactPhone';
+import ContactEmail from '../components/footer/ContactEmail';
 import Image from 'next/image';
 import FooterDecor from '../public/images/footer/row.svg';
 import InstagramLogo from '../public/images/footer/instagram.svg';
@@ -123,16 +125,19 @@ export default function Home({ contactDetails, images }) {
         }
         contact={
           <>
-            <Contact
+            <ContactInsta
               logo={InstagramLogo}
               instaName={contactDetails[0].fields.instagramName}
               instaUrl={contactDetails[0].fields.instagramUrl}
             />
-            <Contact
+            <ContactPhone
               logo={TelephoneLogo}
               text={contactDetails[0].fields.phoneNumber}
             />
-            <Contact logo={EmailLogo} text={contactDetails[0].fields.email} />
+            <ContactEmail
+              logo={EmailLogo}
+              text={contactDetails[0].fields.email}
+            />
           </>
         }
         smallImages={
