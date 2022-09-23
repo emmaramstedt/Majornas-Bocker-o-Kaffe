@@ -105,6 +105,18 @@ nav ul li {
   background: #ffe7aa;
 }
 
+.datePast div .eventDecoOne {
+  background: #f2f2f2;
+}
+
+.datePast div .eventDecoTwo {
+  background: #d0d0d0;
+}
+
+.datePast div .eventDecoThree {
+  background: #e2e2e2;
+}
+
 .eventsWrapper {
   max-width: fit-content;
   margin: auto;

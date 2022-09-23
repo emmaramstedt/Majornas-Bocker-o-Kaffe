@@ -1,3 +1,5 @@
+import moment from "moment";
+
 const EventsCard = ({
   isActive,
   EventCategory,
@@ -13,9 +15,15 @@ const EventsCard = ({
       <div
         className={`xs:max-w-[312px] md:w-[312px] h-[270px] border-solid border border-[#111827] rounded-t-lg mb-[32px] ${
           isActive ? "visible" : "hidden"
-        }`}
+        } ${EventDate >= moment().format("YYYY-MM-DD") ? "" : "bg-[#f2f2f2]"}`}
       >
-        <div className={EventCategory}>
+        <div
+          className={
+            EventDate >= moment().format("YYYY-MM-DD")
+              ? EventCategory
+              : "datePast"
+          }
+        >
           <div className="h-[63px] flex">
             <div className="w-[100%] eventDecoOne rounded-tl-lg flex justify-center items-center font-ibmRegular">
               <div>{EventCategory}</div>
@@ -28,7 +36,13 @@ const EventsCard = ({
               <h2 className="font-ibmBold">{EventTitle}</h2>
             </div>
             <div>{EventContent}</div>
-            <div>
+            <div
+              className={
+                EventDate >= moment().format("YYYY-MM-DD")
+                  ? EventCategory
+                  : "line-through"
+              }
+            >
               {EventDate} - {EventTime}
             </div>
             <div>

@@ -41,6 +41,7 @@ export default function EventsFeed({ contactDetails }) {
       });
   }, []);
   const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <Layout>
