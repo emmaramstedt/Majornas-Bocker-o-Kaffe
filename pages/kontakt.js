@@ -13,6 +13,7 @@ import ContactInsta from '../components/footer/ContactInsta';
 import ContactPhone from '../components/footer/ContactPhone';
 import ContactEmail from '../components/footer/ContactEmail';
 import FooterDecor from '../public/images/footer/row.svg';
+import FooterDecorTwo from '../public/images/footer/row2.svg';
 import InstagramLogo from '../public/images/footer/instagram.svg';
 import EmailLogo from '../public/images/footer/email.svg';
 import TelephoneLogo from '../public/images/footer/telephone.svg';
@@ -92,7 +93,7 @@ export default function contactPage({ contactDetails }) {
           <div className='w-full h-full flex-col relative'>
             <div className='h-1/5 w-full relative'>
               <Image
-                className='h-full absolute object-cover animate-wiggle'
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt='Green shapes'
                 layout='fill'
@@ -100,7 +101,15 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className='h-1/5 w-full relative'>
               <Image
-                className='h-full absolute object-cover -scale-x-100'
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
+                alt='Green shapes'
+                layout='fill'
+              />
+            </div>
+            <div className='h-1/5 w-full relative'>
+              <Image
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt='Green shapes'
                 layout='fill'
@@ -108,23 +117,15 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className='h-1/5 w-full relative'>
               <Image
-                className='h-full absolute object-cover animate-wiggle'
-                src={FooterDecor}
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
                 alt='Green shapes'
                 layout='fill'
               />
             </div>
             <div className='h-1/5 w-full relative'>
               <Image
-                className='h-full absolute object-cover -scale-x-100'
-                src={FooterDecor}
-                alt='Green shapes'
-                layout='fill'
-              />
-            </div>
-            <div className='h-1/5 w-full relative'>
-              <Image
-                className='h-full absolute object-cover animate-wiggle'
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt='Green shapes'
                 layout='fill'
@@ -133,10 +134,10 @@ export default function contactPage({ contactDetails }) {
           </div>
         }
         bigImages={
-          <div className='w-full h-full flex-col relative overflow-x-hidden'>
+          <div className='w-full h-full flex-col relative'>
             <div className='h-1/2 w-full relative'>
               <Image
-                className='h-full absolute object-cover animate-wiggle'
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt='Green shapes'
                 layout='fill'
@@ -144,8 +145,8 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className='h-1/2 w-full relative'>
               <Image
-                className='h-full absolute object-cover -scale-x-100'
-                src={FooterDecor}
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
                 alt='Green shapes'
                 layout='fill'
               />
