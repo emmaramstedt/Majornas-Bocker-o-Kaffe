@@ -1,8 +1,17 @@
-export default function EventsButton({ setIsActive, EventsButtonText }) {
-  const handleClick = (event) => {
-    setIsActive((current) => !current);
-    console.log("you clicked");
+export default function EventsButton({
+  setIsActive,
+  isActive,
+  EventsButtonText,
+}) {
+  const handleClick = () => {
+    // setIsActive(isActive + 5);
+    // console.log(isActive);
+    // let elementss = document.getElementsByClassName("isHidden");
+    // for (let i = 0; i < isActive; i++) {
+    //   elementss[i].classList.remove("isHidden");
+    // }
   };
+
   return (
     <div className="eventsButtonWrapper h-fit">
       <button

@@ -41,7 +41,7 @@ export default function EventsFeed({ contactDetails }) {
         setEvenemangItems(entries.items);
       });
   }, []);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(1);
 
   return (
     <>
