@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const Nth = require("tailwind-nth-child");
-const nth5 = new Nth("5", "-n+5"); // The first five child elements
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -89,5 +87,5 @@ module.exports = {
       two: "2",
     },
   },
-  plugins: [nth5.nthChild()],
+  plugins: [],
 };

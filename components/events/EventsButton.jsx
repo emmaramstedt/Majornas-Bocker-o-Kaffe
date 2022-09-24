@@ -4,12 +4,7 @@ export default function EventsButton({
   EventsButtonText,
 }) {
   const handleClick = () => {
-    // setIsActive(isActive + 5);
-    // console.log(isActive);
-    // let elementss = document.getElementsByClassName("isHidden");
-    // for (let i = 0; i < isActive; i++) {
-    //   elementss[i].classList.remove("isHidden");
-    // }
+    setIsActive(isActive + 5);
   };
 
   return (
