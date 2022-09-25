@@ -1,3 +1,27 @@
-export default function EventsCardsWrapper(props) {
-  return <div className="eventsCardsWrapper mt-[80px]">{props.children}</div>;
+import styled from "styled-components";
+
+export default function EventsCardsWrapper({ children, isActive }) {
+  const numberToShow = 5;
+  console.log(isActive);
+  const Wow = styled.div`
+    margin-top: 80px;
+    grid-area: 2 / 1 / 2 / 1;
+    .card:nth-of-type(-n + ${isActive}) {
+      display: block;
+    }
+    @media (min-width: 774px) {
+      grid-area: 1 / 2 / 5 / 2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    @media (min-width: 1120px) {
+      grid-area: 1 / 2 / 4 / 3;
+      max-width: 656px;
+      justify-self: right;
+      justify-content: space-between;
+    }
+  `;
+
+  return <Wow>{children}</Wow>;
 }

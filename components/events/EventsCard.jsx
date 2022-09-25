@@ -1,7 +1,6 @@
 import moment from "moment";
 
 const EventsCard = ({
-  isActive,
   EventCategory,
   EventTitle,
   EventContent,
@@ -13,9 +12,9 @@ const EventsCard = ({
   return (
     <>
       <div
-        className={`xs:max-w-[312px] md:w-[312px] h-[270px] border-solid border border-[#111827] rounded-t-lg mb-[32px] ${
-          isActive ? "visible" : "hidden"
-        } ${EventDate >= moment().format("YYYY-MM-DD") ? "" : "bg-[#f2f2f2]"}`}
+        className={`card isHidden xs:max-w-[312px] md:w-[312px] h-[270px] border-solid border border-[#111827] rounded-t-lg mb-[32px] ${
+          EventDate >= moment().format("YYYY-MM-DD") ? "" : "bg-[#f2f2f2]"
+        }`}
       >
         <div
           className={

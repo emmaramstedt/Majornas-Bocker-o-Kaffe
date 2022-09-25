@@ -41,7 +41,7 @@ export default function EventsFeed({ contactDetails }) {
         setEvenemangItems(entries.items);
       });
   }, []);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(5);
 
   return (
     <>
@@ -59,7 +59,7 @@ export default function EventsFeed({ contactDetails }) {
                 isActive={isActive}
               />
             </Sticky>
-            <EventsCardsWrapper>
+            <EventsCardsWrapper isActive={isActive}>
               {evenemangItems &&
                 evenemangItems.map((event, i) => {
                   return (

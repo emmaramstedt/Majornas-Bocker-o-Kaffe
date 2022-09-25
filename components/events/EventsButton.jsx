@@ -1,8 +1,12 @@
-export default function EventsButton({ setIsActive, EventsButtonText }) {
-  const handleClick = (event) => {
-    setIsActive((current) => !current);
-    console.log("you clicked");
+export default function EventsButton({
+  setIsActive,
+  isActive,
+  EventsButtonText,
+}) {
+  const handleClick = () => {
+    setIsActive(isActive + 5);
   };
+
   return (
     <div className="eventsButtonWrapper h-fit">
       <button

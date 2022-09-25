@@ -135,9 +135,9 @@ nav ul li {
   justify-self: normal;
 }
 
-.eventsCardsWrapper {
+/* .eventsCardsWrapper {
   grid-area: 2 / 1 / 2 / 1;
-}
+} */
 
 @media (min-width: 774px) {
   .eventsWrapper {
@@ -152,27 +152,25 @@ nav ul li {
     grid-area: 2 / 1 / 2 / 1;
   }
 
-  .eventsCardsWrapper {
+  /* .eventsCardsWrapper {
     grid-area: 1 / 2 / 5 / 2;
-  }
-  .eventsCardsWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-  }
+  } */
 }
 
 @media (min-width: 1120px) {
-  .eventsCardsWrapper {
+  /* .eventsCardsWrapper {
     grid-area: 1 / 2 / 4 / 3;
     max-width: 656px;
     justify-self: right;
     justify-content: space-between;
-  }
+  } */
 }
 
 .isHidden {
-  visibility: hidden;
+  display: none;
 }
 
 .isVisible {
