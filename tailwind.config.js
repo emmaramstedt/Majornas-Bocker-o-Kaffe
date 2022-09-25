@@ -60,6 +60,7 @@ module.exports = {
         defaultGray100: "#F2F2F2",
         extendedTrueGray500: "#737373",
         extendedTrueGray900: "#171717",
+        customNewBlue: "#BEE3FF",
       },
       boxShadow: {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
