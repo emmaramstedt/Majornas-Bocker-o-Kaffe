@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
+
   theme: {
     fontFamily: {
       spaceMono: ['Space Mono', 'cursive'],
@@ -51,14 +52,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        link: '#6A91F4',
-        linkHover: '#162ADE',
-        cards: '#FCFCFD',
-        heroBackground: '#FFFFFF',
-        orangeColor: '#FEB273',
-        defaultGray100: '#F2F2F2',
-        extendedTrueGray500: '#737373',
-        extendedTrueGray900: '#171717',
+        link: "#6A91F4",
+        linkHover: "#162ADE",
+        cards: "#FCFCFD",
+        heroBackground: "#FFFFFF",
+        orangeColor: "#FEB273",
+        defaultGray100: "#F2F2F2",
+        extendedTrueGray500: "#737373",
+        extendedTrueGray900: "#171717",
+        customNewBlue: "#BEE3FF",
       },
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',

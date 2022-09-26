@@ -20,7 +20,7 @@ import { useState, useEffect } from "react";
 import EventsButton from "../components/events/EventsButton";
 import EventsWrapper from "../components/events/EventsWrapper";
 import EventsCardsWrapper from "../components/events/EventsCardsWrapper";
-import Sticky from "react-sticky-el";
+import FloatMe from "../components/events/Float";
 
 export async function getStaticProps() {
   const res = await client.getEntries({
@@ -32,6 +32,7 @@ export async function getStaticProps() {
     },
   };
 }
+
 export default function EventsFeed({ contactDetails }) {
   const [evenemangItems, setEvenemangItems] = useState(null);
   useEffect(() => {
@@ -44,14 +45,14 @@ export default function EventsFeed({ contactDetails }) {
         setEvenemangItems(entries.items);
       });
   }, []);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(5);
 
   return (
     <>
       <Layout>
         <main>
           <EventsWrapper>
-            <Sticky bottomOffset={20} className="w-[312px]">
+            <FloatMe>
               <EventsHeader
                 EventHeaderTitle="Kommande nyheter & events"
                 EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
@@ -61,21 +62,20 @@ export default function EventsFeed({ contactDetails }) {
                 setIsActive={setIsActive}
                 isActive={isActive}
               />
-            </Sticky>
-            <EventsCardsWrapper>
+            </FloatMe>
+            <EventsCardsWrapper isActive={isActive}>
               {evenemangItems &&
                 evenemangItems.map((event, i) => {
                   return (
                     <EventsCard
                       key={i}
+                      Myref={i}
                       EventCategory={event.fields.category}
                       EventTitle={event.fields.title}
                       EventContent={event.fields.description}
                       EventDate={event.fields.date.substring(0, 10)}
                       EventTime={event.fields.date.substring(11)}
                       EventLink={event.fields.link}
-                      EventLinkText={event.fields.linkText}
-                      isActive={isActive}
                     />
                   );
                 })}

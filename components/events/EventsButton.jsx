@@ -1,8 +1,14 @@
-export default function EventsButton({ setIsActive, EventsButtonText }) {
-  const handleClick = (event) => {
-    setIsActive((current) => !current);
-    console.log("you clicked");
+import { animateScroll as scroll } from "react-scroll";
+export default function EventsButton({
+  setIsActive,
+  isActive,
+  EventsButtonText,
+}) {
+  const handleClick = () => {
+    setIsActive(isActive + 5);
+    scroll.scrollMore(1);
   };
+
   return (
     <div className="eventsButtonWrapper h-fit">
       <button

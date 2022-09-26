@@ -1,7 +1,3 @@
-export default function EventsWrapper(props) {
-  return (
-    <>
-      <div className="eventsWrapper grid">{props.children}</div>
-    </>
-  );
+export default function EventsWrapper({ children }) {
+  return <div className="eventsWrapper grid">{children}</div>;
 }
