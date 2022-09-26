@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export default function EventsCardsWrapper({ children, isActive }) {
-  const numberToShow = 5;
-  console.log(isActive);
-  const Wow = styled.div`
+  const Wrapper = styled.div`
     margin-top: 80px;
     grid-area: 2 / 1 / 2 / 1;
     .card:nth-of-type(-n + ${isActive}) {
@@ -23,5 +21,5 @@ export default function EventsCardsWrapper({ children, isActive }) {
     }
   `;
 
-  return <Wow>{children}</Wow>;
+  return <Wrapper>{children}</Wrapper>;
 }

@@ -1,3 +1,4 @@
+import { animateScroll as scroll } from "react-scroll";
 export default function EventsButton({
   setIsActive,
   isActive,
@@ -5,6 +6,7 @@ export default function EventsButton({
 }) {
   const handleClick = () => {
     setIsActive(isActive + 5);
+    scroll.scrollMore(1);
   };
 
   return (
