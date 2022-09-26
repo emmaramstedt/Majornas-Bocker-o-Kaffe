@@ -2,21 +2,24 @@ import Head from "next/head";
 import client from "../contentful";
 import React from "react";
 
-import Layout from "../components/Layout";
-import Footer from "../components/footer/Footer";
-import Heading from "../components/footer/Heading";
-import OpeningHours from "../components/footer/OpeningHours";
-import Contact from "../components/footer/Contact";
-import Image from "next/image";
-import FooterDecor from "../public/images/footer/row.svg";
-import InstagramLogo from "../public/images/footer/instagram.svg";
-import EmailLogo from "../public/images/footer/email.svg";
-import TelephoneLogo from "../public/images/footer/telephone.svg";
-import AboutOffer from "../components/about/AboutOffer";
-import AboutWrapper from "../components/about/AboutWrapper";
-import AboutHeader from "../components/about/AboutHeader";
-import AboutContent from "../components/about/AboutContent";
-import Instagram from "../components/about/Instagram";
+import Layout from '../components/Layout';
+import Footer from '../components/footer/Footer';
+import Heading from '../components/footer/Heading';
+import OpeningHours from '../components/footer/OpeningHours';
+import ContactInsta from '../components/footer/ContactInsta';
+import ContactPhone from '../components/footer/ContactPhone';
+import ContactEmail from '../components/footer/ContactEmail';
+import Image from 'next/image';
+import FooterDecor from '../public/images/footer/row.svg';
+import FooterDecorTwo from '../public/images/footer/row2.svg';
+import InstagramLogo from '../public/images/footer/instagram.svg';
+import EmailLogo from '../public/images/footer/email.svg';
+import TelephoneLogo from '../public/images/footer/telephone.svg';
+import AboutOffer from '../components/about/AboutOffer';
+import AboutWrapper from '../components/about/AboutWrapper';
+import AboutHeader from '../components/about/AboutHeader';
+import AboutContent from '../components/about/AboutContent';
+import Instagram from '../components/about/Instagram';
 
 export async function getStaticProps() {
   const res = await client.getEntries({
@@ -72,8 +75,8 @@ export default function Home({ contactDetails, images }) {
       <main className="mt-[80px]">
         <AboutWrapper>
           <AboutHeader
-            title="Majornas Böcker & Kaffe"
-            content="En trivsam bokhandel där man kan botanisera bland böcker, eller slå sig ner med en espresso och dagstidningen."
+            title='Majornas Böcker & Kaffe'
+            content='En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen.'
           />
           <AboutOffer />
           <AboutContent content="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter." />
@@ -123,23 +126,26 @@ export default function Home({ contactDetails, images }) {
         }
         contact={
           <>
-            <Contact
+            <ContactInsta
               logo={InstagramLogo}
               instaName={contactDetails[0].fields.instagramName}
               instaUrl={contactDetails[0].fields.instagramUrl}
             />
-            <Contact
+            <ContactPhone
               logo={TelephoneLogo}
               text={contactDetails[0].fields.phoneNumber}
             />
-            <Contact logo={EmailLogo} text={contactDetails[0].fields.email} />
+            <ContactEmail
+              logo={EmailLogo}
+              text={contactDetails[0].fields.email}
+            />
           </>
         }
         smallImages={
           <div className="w-full h-full flex-col relative">
             <div className="h-1/5 w-full relative">
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -147,7 +153,15 @@ export default function Home({ contactDetails, images }) {
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className="h-full absolute object-cover -scale-x-100"
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
+                alt='Green shapes'
+                layout='fill'
+              />
+            </div>
+            <div className="h-1/5 w-full relative">
+              <Image
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -155,23 +169,15 @@ export default function Home({ contactDetails, images }) {
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className="h-full absolute object-cover animate-wiggle"
-                src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className="h-full absolute object-cover -scale-x-100"
-                src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
-              />
-            </div>
-            <div className="h-1/5 w-full relative">
-              <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -180,10 +186,10 @@ export default function Home({ contactDetails, images }) {
           </div>
         }
         bigImages={
-          <div className="w-full h-full flex-col relative overflow-x-hidden">
-            <div className="h-1/2 w-full relative">
+          <div className='w-full h-full flex-col relative'>
+            <div className='h-1/2 w-full relative'>
               <Image
-                className="h-full absolute object-cover animate-wiggle"
+                className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -191,10 +197,10 @@ export default function Home({ contactDetails, images }) {
             </div>
             <div className="h-1/2 w-full relative">
               <Image
-                className="h-full absolute object-cover -scale-x-100"
-                src={FooterDecor}
-                alt="Green shapes"
-                layout="fill"
+                className='h-full absolute object-cover animate-wiggleLeft'
+                src={FooterDecorTwo}
+                alt='Green shapes'
+                layout='fill'
               />
             </div>
           </div>

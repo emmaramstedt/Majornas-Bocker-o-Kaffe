@@ -20,15 +20,15 @@ export default function Form() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white">
+      <div className='flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white'>
         <form
           action="/"
           method="post"
           onSubmit={handleSubmit(onSubmitForm)}
           className="grid grid-cols-1 xs:gap-y-6 xs:pl-[16px] md:pl-[32px]"
         >
-          <div className="xs:text-[18px]">
-            <label htmlFor="name">Namn</label>
+          <div className='xs:text-[18px]'>
+            <label htmlFor='name'>Namn</label>
             <input
               id="name"
               type="text"
@@ -48,8 +48,8 @@ export default function Form() {
               {errors?.name?.message}
             </span>
           </div>
-          <div className="xs:text-[18px]">
-            <label htmlFor="email">Mailadress</label>
+          <div className='xs:text-[18px]'>
+            <label htmlFor='email'>Mailadress</label>
             <input
               id="email"
               type="text"
@@ -82,8 +82,8 @@ export default function Form() {
               {errors?.email?.message}
             </span>
           </div>
-          <div className="xs:text-[18px]">
-            <label htmlFor="message">Meddelande</label>
+          <div className='xs:text-[18px]'>
+            <label htmlFor='message'>Meddelande</label>
             <textarea
               id="message"
               name="message"
@@ -112,7 +112,7 @@ export default function Form() {
             </span>
           </div>
           <div>
-            <button className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue">
+            <button className='xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue'>
               Skicka mail
             </button>
           </div>
