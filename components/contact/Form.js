@@ -45,7 +45,7 @@ export default function Form() {
               {...register("name", {
                 required: {
                   value: true,
-                  message: "Du måste ange ditt namn",
+                  message: "Var god skriv in ditt namn",
                 },
               })}
             />
@@ -121,7 +121,7 @@ export default function Form() {
                 },
               })}
             />
-            <p className="text-red-400 text-[12px] mt-[4px]">
+            <p className="text-red-400 text-[12px]">
               {errors?.message?.message}
             </p>
           </div>
