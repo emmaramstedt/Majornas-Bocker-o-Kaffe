@@ -1,10 +1,10 @@
 // Client Import
-import client from '../contentful';
+import client from "../contentful";
 
 // Custom Imports
-import Layout from '../components/Layout';
-import Contact from '../components/contact/Contact';
-import Image from 'next/image';
+import Layout from "../components/Layout";
+import Contact from "../components/contact/Contact";
+import Image from "next/image";
 
 import Footer from '../components/footer/Footer';
 import Heading from '../components/footer/Heading';
@@ -19,7 +19,7 @@ import EmailLogo from '../public/images/footer/email.svg';
 import TelephoneLogo from '../public/images/footer/telephone.svg';
 
 export async function getStaticProps() {
-  const res = await client.getEntries({ content_type: 'contactDetails' });
+  const res = await client.getEntries({ content_type: "contactDetails" });
   return {
     props: {
       contactDetails: res.items,
@@ -33,10 +33,10 @@ export default function contactPage({ contactDetails }) {
       <Layout
         pageMeta={{
           title: `${contactDetails[0].fields.companyName} - Kontakt`,
-          description: 'Kontaktuppgifter',
+          description: "Kontaktuppgifter",
         }}
       >
-        <main>
+        <main className="mt-[80px]">
           <Contact
             phoneNumber={contactDetails[0].fields.phoneNumber}
             email={contactDetails[0].fields.email}
@@ -90,16 +90,16 @@ export default function contactPage({ contactDetails }) {
           </>
         }
         smallImages={
-          <div className='w-full h-full flex-col relative'>
-            <div className='h-1/5 w-full relative'>
+          <div className="w-full h-full flex-col relative">
+            <div className="h-1/5 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
-            <div className='h-1/5 w-full relative'>
+            <div className="h-1/5 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleLeft'
                 src={FooterDecorTwo}
@@ -107,15 +107,15 @@ export default function contactPage({ contactDetails }) {
                 layout='fill'
               />
             </div>
-            <div className='h-1/5 w-full relative'>
+            <div className="h-1/5 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
-            <div className='h-1/5 w-full relative'>
+            <div className="h-1/5 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleLeft'
                 src={FooterDecorTwo}
@@ -123,12 +123,12 @@ export default function contactPage({ contactDetails }) {
                 layout='fill'
               />
             </div>
-            <div className='h-1/5 w-full relative'>
+            <div className="h-1/5 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
           </div>
@@ -139,11 +139,11 @@ export default function contactPage({ contactDetails }) {
               <Image
                 className='h-full absolute object-cover animate-wiggleRight'
                 src={FooterDecor}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
-            <div className='h-1/2 w-full relative'>
+            <div className="h-1/2 w-full relative">
               <Image
                 className='h-full absolute object-cover animate-wiggleLeft'
                 src={FooterDecorTwo}
