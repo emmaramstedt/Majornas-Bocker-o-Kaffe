@@ -20,15 +20,20 @@ export default function Form() {
 
   return (
     <>
-      <div className='flex flex-col justify-center items-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white'>
+      <div className="flex flex-col justify-center items-center text-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white">
         <form
           action="/"
           method="post"
           onSubmit={handleSubmit(onSubmitForm)}
-          className="grid grid-cols-1 xs:gap-y-6 xs:pl-[16px] md:pl-[32px]"
+          className="grid grid-cols-1 xs:gap-y-6"
         >
-          <div className='xs:text-[18px]'>
-            <label htmlFor='name'>Namn</label>
+          <div className="xs:text-[18px]">
+            <label
+              htmlFor="name"
+              className={`text-left ${errors.name ? "hidden" : "block"}`}
+            >
+              Namn
+            </label>
             <input
               id="name"
               type="text"
@@ -44,18 +49,22 @@ export default function Form() {
                 },
               })}
             />
-            <span className="text-red-400 text-sm pl-[15px]">
+            <p className="text-red-400 text-[12px] pt-[4px] ">
               {errors?.name?.message}
-            </span>
+            </p>
           </div>
-          <div className='xs:text-[18px]'>
-            <label htmlFor='email'>Mailadress</label>
+          <div className="xs:text-[18px]">
+            <label
+              htmlFor="email"
+              className={`text-left ${errors.email ? "hidden" : "block"}`}
+            >
+              Mailadress
+            </label>
             <input
               id="email"
               type="text"
               name="email"
               placeholder="Oprahwinfrey@yahoo.com"
-              required
               className={`xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[40px] mt-[4px] border-[1px] border-black rounded-[32px] xs:text-[12px] pl-[10px] placeholder-gray-300 focus:ring-blue-500 focus:border-blue-500 focus:outline-none focus:ring-2 ${
                 errors.email ? "ring-2 ring-red-500" : null
               }`}
@@ -66,7 +75,7 @@ export default function Form() {
                 },
                 minLength: {
                   value: 8,
-                  message: "Den är för kort",
+                  message: "Adressen är för kort",
                 },
                 maxLength: {
                   value: 120,
@@ -74,16 +83,21 @@ export default function Form() {
                 },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "Ange en valid e-postadress",
+                  message: "Ange en giltig e-postadress",
                 },
               })}
             />
-            <span className="text-red-400 text-sm mt-[4px] pl-[15px]">
+            <p className="text-red-400 text-[12px] mt-[4px]">
               {errors?.email?.message}
-            </span>
+            </p>
           </div>
-          <div className='xs:text-[18px]'>
-            <label htmlFor='message'>Meddelande</label>
+          <div className="xs:text-[18px]">
+            <label
+              htmlFor="message"
+              className={`text-left ${errors.message ? "hidden" : "block"}`}
+            >
+              Meddelande
+            </label>
             <textarea
               id="message"
               name="message"
@@ -107,12 +121,12 @@ export default function Form() {
                 },
               })}
             />
-            <span className="text-red-400 text-sm mt-[4px] pl-[15px] ">
+            <p className="text-red-400 text-[12px] mt-[4px]">
               {errors?.message?.message}
-            </span>
+            </p>
           </div>
           <div>
-            <button className='xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue'>
+            <button className="xs:w-[280px] md:w-[333px] xl:w-[337px] xs:h-[48px] border-[1px] border-black rounded-[32px] xs:text-[18px] bg-customNewBlue">
               Skicka mail
             </button>
           </div>
