@@ -26,7 +26,7 @@ const EventsCard = ({
           }
         >
           <div className="h-[63px] flex">
-            <div className="w-[100%] eventDecoOne rounded-tl-lg flex justify-center items-center font-ibmRegular">
+            <div className="w-[100%] eventDecoOne rounded-tl-lg flex justify-center items-center font-ibmBold">
               <div>{EventCategory}</div>
             </div>
             <div className="min-w-[63px] eventDecoTwo rounded-full"></div>
