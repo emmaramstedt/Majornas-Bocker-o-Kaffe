@@ -2,7 +2,7 @@ export default function Instagram() {
   return (
     <>
       <div className="flex justify-center lg:justify-start mb-[32px] lg:mb-[46px]">
-        <div className="flex flex-wrap xs:w-full md:w-[510px] lg:w-[399px]">
+        <div className="flex flex-wrap xs:w-full sm:w-[510px] lg:w-[399px]">
           <div className="bg-[#A3D5BA] w-[calc(100%/5*3)] rounded-l-full flex items-center justify-center">
             <p className="text-lg font-medium font-ibmBold">Instagram</p>
           </div>

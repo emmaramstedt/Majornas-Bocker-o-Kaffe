@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function EventsCardsWrapper({ children, isActive }) {
   const Wrapper = styled.div`
-    margin-top: 80px;
+    margin-top: 40px;
     grid-area: 2 / 1 / 2 / 1;
     .card:nth-of-type(-n + ${isActive}) {
       display: block;

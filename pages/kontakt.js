@@ -6,17 +6,17 @@ import Layout from "../components/Layout";
 import Contact from "../components/contact/Contact";
 import Image from "next/image";
 
-import Footer from '../components/footer/Footer';
-import Heading from '../components/footer/Heading';
-import OpeningHours from '../components/footer/OpeningHours';
-import ContactInsta from '../components/footer/ContactInsta';
-import ContactPhone from '../components/footer/ContactPhone';
-import ContactEmail from '../components/footer/ContactEmail';
-import FooterDecor from '../public/images/footer/row.svg';
-import FooterDecorTwo from '../public/images/footer/row2.svg';
-import InstagramLogo from '../public/images/footer/instagram.svg';
-import EmailLogo from '../public/images/footer/email.svg';
-import TelephoneLogo from '../public/images/footer/telephone.svg';
+import Footer from "../components/footer/Footer";
+import Heading from "../components/footer/Heading";
+import OpeningHours from "../components/footer/OpeningHours";
+import ContactInsta from "../components/footer/ContactInsta";
+import ContactPhone from "../components/footer/ContactPhone";
+import ContactEmail from "../components/footer/ContactEmail";
+import FooterDecor from "../public/images/footer/row.svg";
+import FooterDecorTwo from "../public/images/footer/row2.svg";
+import InstagramLogo from "../public/images/footer/instagram.svg";
+import EmailLogo from "../public/images/footer/email.svg";
+import TelephoneLogo from "../public/images/footer/telephone.svg";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "contactDetails" });
@@ -36,7 +36,7 @@ export default function contactPage({ contactDetails }) {
           description: "Kontaktuppgifter",
         }}
       >
-        <main className="mt-[80px]">
+        <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%]">
           <Contact
             phoneNumber={contactDetails[0].fields.phoneNumber}
             email={contactDetails[0].fields.email}
@@ -93,7 +93,7 @@ export default function contactPage({ contactDetails }) {
           <div className="w-full h-full flex-col relative">
             <div className="h-1/5 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleRight'
+                className="h-full absolute object-cover animate-wiggleRight"
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -101,15 +101,15 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleLeft'
+                className="h-full absolute object-cover animate-wiggleLeft"
                 src={FooterDecorTwo}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleRight'
+                className="h-full absolute object-cover animate-wiggleRight"
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -117,15 +117,15 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleLeft'
+                className="h-full absolute object-cover animate-wiggleLeft"
                 src={FooterDecorTwo}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
             <div className="h-1/5 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleRight'
+                className="h-full absolute object-cover animate-wiggleRight"
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -134,10 +134,10 @@ export default function contactPage({ contactDetails }) {
           </div>
         }
         bigImages={
-          <div className='w-full h-full flex-col relative'>
-            <div className='h-1/2 w-full relative'>
+          <div className="w-full h-full flex-col relative">
+            <div className="h-1/2 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleRight'
+                className="h-full absolute object-cover animate-wiggleRight"
                 src={FooterDecor}
                 alt="Green shapes"
                 layout="fill"
@@ -145,10 +145,10 @@ export default function contactPage({ contactDetails }) {
             </div>
             <div className="h-1/2 w-full relative">
               <Image
-                className='h-full absolute object-cover animate-wiggleLeft'
+                className="h-full absolute object-cover animate-wiggleLeft"
                 src={FooterDecorTwo}
-                alt='Green shapes'
-                layout='fill'
+                alt="Green shapes"
+                layout="fill"
               />
             </div>
           </div>

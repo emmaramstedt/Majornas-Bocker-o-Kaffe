@@ -5,9 +5,5 @@ export default function FloatMe({ children }) {
   if (isMobile) {
     return <>{children}</>;
   }
-  return (
-    <Sticky bottomOffset={20} className="w-[312px]">
-      {children}
-    </Sticky>
-  );
+  return <Sticky className="w-[312px]">{children}</Sticky>;
 }

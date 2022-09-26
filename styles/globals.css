@@ -26,8 +26,6 @@ body {
 }
 main {
   max-width: 1920px;
-  margin-left: 7%;
-  margin-right: 7%;
 }
 @media (min-width: 1920px) {
   main {
@@ -118,7 +116,7 @@ nav ul li {
 }
 
 .eventsWrapper {
-  max-width: fit-content;
+  max-width: 1920px;
   margin: auto;
   justify-items: center;
   grid-column-gap: 32px;
