@@ -1,7 +1,7 @@
 export default function AboutOffer() {
   return (
     <>
-      <div className="w-full flex xs:justify-center md:justify-end mb-[32px] lg:mb-[46px]">
+      <div className="w-full flex xs:justify-center sm:justify-end max-w-[933px] my-[32px] lg:mb-[46px] xl:row-start-2 xl:col-start-2">
         <div className="flex flex-wrap xs:w-full sm:w-[510px] lg:w-[399px]">
           <div className="bg-[#FFE7AA] aspect-square h-auto w-[calc(100%/5)] rounded-[50%]"></div>
           <div className="bg-[#66AB8A] aspect-square h-auto w-[calc(100%/5)] rounded-[50%]"></div>

@@ -29,7 +29,8 @@ main {
 }
 @media (min-width: 1920px) {
   main {
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 h1 {
@@ -132,10 +133,6 @@ nav ul li {
   justify-self: normal;
 }
 
-/* .eventsCardsWrapper {
-  grid-area: 2 / 1 / 2 / 1;
-} */
-
 @media (min-width: 774px) {
   .eventsWrapper {
     justify-items: normal;
@@ -148,22 +145,6 @@ nav ul li {
   .eventsButtonWrapper {
     grid-area: 2 / 1 / 2 / 1;
   }
-
-  /* .eventsCardsWrapper {
-    grid-area: 1 / 2 / 5 / 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  } */
-}
-
-@media (min-width: 1120px) {
-  /* .eventsCardsWrapper {
-    grid-area: 1 / 2 / 4 / 3;
-    max-width: 656px;
-    justify-self: right;
-    justify-content: space-between;
-  } */
 }
 
 .isHidden {
@@ -172,4 +153,27 @@ nav ul li {
 
 .isVisible {
   visibility: visible;
+}
+
+@media (min-width: 1054px) {
+  .aboutContainer {
+    display: grid;
+    gap: 64px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contentOne offer"
+      "contentTwo offer";
+  }
+
+  .contentOne {
+    grid-area: contentOne;
+  }
+
+  .contentTwo {
+    grid-area: contentTwo;
+  }
+
+  .offer {
+    grid-area: offer;
+  }
 }
