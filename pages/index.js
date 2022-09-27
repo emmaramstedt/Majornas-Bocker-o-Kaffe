@@ -1,4 +1,3 @@
-import Head from "next/head";
 import client from "../contentful";
 import React from "react";
 
@@ -15,9 +14,7 @@ import FooterDecorTwo from "../public/images/footer/row2.svg";
 import InstagramLogo from "../public/images/footer/instagram.svg";
 import EmailLogo from "../public/images/footer/email.svg";
 import TelephoneLogo from "../public/images/footer/telephone.svg";
-import AboutOffer from "../components/about/AboutOffer";
 import AboutWrapper from "../components/about/AboutWrapper";
-import AboutHeader from "../components/about/AboutHeader";
 import AboutContent from "../components/about/AboutContent";
 import Instagram from "../components/about/Instagram";
 
@@ -70,14 +67,12 @@ export default function Home({ contactDetails, images }) {
         description: "Om Oss - Majornas Böcker & Kaffe",
       }}
     >
-      <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%]">
-        <AboutWrapper>
-          <AboutHeader
-            title="Majornas Böcker & Kaffe"
-            content="En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen."
-          />
-          <AboutContent content="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter." />
-        </AboutWrapper>
+      <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
+        <AboutContent
+          title="Majornas Böcker & Kaffe"
+          contentOne="En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen."
+          contentTwo="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter. "
+        />
         <Instagram />
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mx-auto">

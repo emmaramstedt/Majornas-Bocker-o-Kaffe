@@ -56,7 +56,7 @@ export default function EventsFeed({ contactDetails }) {
             "Kalender med information om events, bokcriklar, författarkvällar",
         }}
       >
-        <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%]">
+        <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
           <EventsWrapper>
             <FloatMe>
               <EventsHeader

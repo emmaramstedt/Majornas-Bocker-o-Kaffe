@@ -1,6 +1,7 @@
-import Navbar from '../components/navbar/Navbar';
-import '../styles/globals.css';
-import { motion } from 'framer-motion';
+import Navbar from "../components/navbar/Navbar";
+import "../styles/globals.css";
+import { motion } from "framer-motion";
+import autoprefixer from "autoprefixer";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -8,8 +9,8 @@ function MyApp({ Component, pageProps, router }) {
       <Navbar />
       <motion.div
         key={router.route}
-        initial='pageInitial'
-        animate='pageAnimate'
+        initial="pageInitial"
+        animate="pageAnimate"
         variants={{
           pageInitial: {
             opacity: 0,
