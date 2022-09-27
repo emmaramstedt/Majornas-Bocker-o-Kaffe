@@ -63,7 +63,9 @@ nav ul li {
   align-self: center;
   background: #66ab8a;
 }
-
+.eventDecoOne {
+  overflow: hidden !important;
+}
 .Bokcirkel div .eventDecoOne {
   background: #ffb7bb;
 }
