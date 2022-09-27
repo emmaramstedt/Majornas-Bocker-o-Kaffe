@@ -10,10 +10,10 @@ export default function EventsButton({
   };
 
   return (
-    <div className="eventsButtonWrapper h-fit">
+    <div className="eventsButtonWrapper h-fit font-ibmRegular">
       <button
         onClick={() => handleClick(true)}
-        className="border-solid border border-[#111827] rounded-full cursor-pointer bg-[#f3f4f6] py-[12px] px-[22px]"
+        className="border-solid border border-[#111827] rounded-full cursor-pointer bg-[#F9FAFB] py-[12px] px-[22px]"
       >
         {EventsButtonText}
       </button>
