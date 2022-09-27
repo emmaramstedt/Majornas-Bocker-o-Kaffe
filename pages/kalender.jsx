@@ -21,6 +21,7 @@ import EventsButton from "../components/events/EventsButton";
 import EventsWrapper from "../components/events/EventsWrapper";
 import EventsCardsWrapper from "../components/events/EventsCardsWrapper";
 import FloatMe from "../components/events/Float";
+import moment from "moment";
 
 export async function getStaticProps() {
   const res = await client.getEntries({
@@ -34,15 +35,28 @@ export async function getStaticProps() {
 }
 
 export default function EventsFeed({ contactDetails }) {
-  const [evenemangItems, setEvenemangItems] = useState(null);
+  const [currentEventsItems, setCurrentEventsItems] = useState(null);
   useEffect(() => {
     client
       .getEntries({
         content_type: "evenemang",
-        order: "-fields.date",
+        "fields.date[gte]": moment().format("YYYY-MM-DD"),
+        order: "fields.date",
       })
       .then((entries) => {
-        setEvenemangItems(entries.items);
+        setCurrentEventsItems(entries.items);
+      });
+  }, []);
+  const [pastEventsItems, setPastEventsItems] = useState(null);
+  useEffect(() => {
+    client
+      .getEntries({
+        content_type: "evenemang",
+        "fields.date[lt]": moment().format("YYYY-MM-DD"),
+        order: "fields.date",
+      })
+      .then((entries) => {
+        setPastEventsItems(entries.items);
       });
   }, []);
   const [isActive, setIsActive] = useState(5);
@@ -53,7 +67,7 @@ export default function EventsFeed({ contactDetails }) {
         pageMeta={{
           title: `${contactDetails[0].fields.companyName} - Kalender`,
           description:
-            "Kalender med information om events, bokcriklar, författarkvällar",
+            "Kalender med information om events, bokcirklar, författarkvällar",
         }}
       >
         <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
@@ -70,18 +84,33 @@ export default function EventsFeed({ contactDetails }) {
               />
             </FloatMe>
             <EventsCardsWrapper isActive={isActive}>
-              {evenemangItems &&
-                evenemangItems.map((event, i) => {
+              {currentEventsItems &&
+                currentEventsItems.map((event, i) => {
                   return (
                     <EventsCard
                       key={i}
-                      Myref={i}
                       EventCategory={event.fields.category}
                       EventTitle={event.fields.title}
                       EventContent={event.fields.description}
                       EventDate={event.fields.date.substring(0, 10)}
                       EventTime={event.fields.date.substring(11)}
                       EventLink={event.fields.link}
+                      EventLinkText={event.fields.linkText}
+                    />
+                  );
+                })}
+              {pastEventsItems &&
+                pastEventsItems.map((event, i) => {
+                  return (
+                    <EventsCard
+                      key={i}
+                      EventCategory={event.fields.category}
+                      EventTitle={event.fields.title}
+                      EventContent={event.fields.description}
+                      EventDate={event.fields.date.substring(0, 10)}
+                      EventTime={event.fields.date.substring(11)}
+                      EventLink={event.fields.link}
+                      EventLinkText={event.fields.linkText}
                     />
                   );
                 })}
