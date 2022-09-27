@@ -67,7 +67,7 @@ export default function EventsFeed({ contactDetails }) {
         pageMeta={{
           title: `${contactDetails[0].fields.companyName} - Kalender`,
           description:
-            "Kalender med information om events, bokcriklar, författarkvällar",
+            "Kalender med information om events, bokcirklar, författarkvällar",
         }}
       >
         <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%]">
