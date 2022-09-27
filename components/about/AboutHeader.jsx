@@ -6,6 +6,13 @@ export default function AboutHeader(props) {
           <h1 className="max-w-[255px]">{props.title}</h1>
           <div className="xs:max-w-[100%]">
             <p>{props.content}</p>
+            <p>
+              Majornas böcker & kaffe är en oberoende bokhandel som öppnade
+              sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker,
+              serieböcker och intressanta fackböcker. Förutom böcker säljs också
+              kort, pussel och spel samt en del pappersvaror och roliga
+              presenter.
+            </p>
           </div>
         </div>
       </div>
