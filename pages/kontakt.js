@@ -36,7 +36,7 @@ export default function contactPage({ contactDetails }) {
           description: "Kontaktuppgifter",
         }}
       >
-        <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
+        <main className="mt-[40px] flex flex-col justify-center items-center">
           <Contact
             phoneNumber={contactDetails[0].fields.phoneNumber}
             email={contactDetails[0].fields.email}
