@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function Form() {
+  const [isError, setIsError] = useState(null);
   const {
     register,
     handleSubmit,
@@ -9,12 +11,18 @@ export default function Form() {
     formState: { errors },
   } = useForm();
 
+  function timeout(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
   async function onSubmitForm(data) {
     await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
     });
-    window.alert("Ditt medelande har skickats");
+    setIsError(false);
+    await timeout(3000);
+    setIsError(true);
     reset();
   }
 
@@ -27,11 +35,18 @@ export default function Form() {
           onSubmit={handleSubmit(onSubmitForm)}
           className="flex flex-col justify-center items-center text-center"
         >
+          <p
+            className={`text-green-400 text-[16px] mb-[8px] ${
+              isError === false ? "block" : "hidden"
+            }`}
+          >
+            Ditt medelande har skickats!
+          </p>
           <div className="xs:text-[18px]">
             <label
               htmlFor="name"
               className={`text-left mb-[8px] ${
-                errors.name ? "hidden" : "block"
+                errors.name || isError === false ? "hidden" : "block"
               }`}
             >
               Namn
