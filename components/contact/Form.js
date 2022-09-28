@@ -28,7 +28,7 @@ export default function Form() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center text-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white">
+      <div className="flex flex-col justify-center items-center leading-[32px] text-center xs:w-[312px] xs:h-[433px] md:w-[397px] md:h-[445px] xl:w-[400px] xl:h-[445px] border-[1px] border-black rounded-[16px] bg-white">
         <form
           action="/"
           method="post"

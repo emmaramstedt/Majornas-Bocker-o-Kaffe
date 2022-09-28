@@ -9,7 +9,7 @@ export default function Contact(props) {
     <>
       {/* Contact Mobile */}
       <div className="md:hidden flex justify-center items-center flex-col font-ibmRegular w-[312px]">
-        <div className="mb-[32px] w-[312px]">
+        <div className="mb-[25px] w-[312px]">
           <ContactTitle
             title="Kontakt"
             text="Besök gärna mig i min butik, och tveka inte på att ställa frågor i förmuläret under."
