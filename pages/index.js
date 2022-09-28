@@ -67,37 +67,43 @@ export default function Home({ contactDetails, images }) {
         description: "Om Oss - Majornas Böcker & Kaffe",
       }}
     >
-      <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
-        <AboutContent
-          title="Majornas Böcker & Kaffe"
-          contentOne="En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen."
-          contentTwo="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter. "
-        />
-        <Instagram />
-        <div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mx-auto">
-            {images &&
-              numberOfImages(images).map((image) => {
-                return (
-                  <div className="flex flex-col pt-10" key={image.id}>
-                    <a href={image.permalink} target="_blank" rel="noreferrer">
-                      <Image
-                        className="object-cover aspect-square"
-                        src={image.media_url}
-                        alt={image.caption}
-                        width={500}
-                        height={500}
-                      />
-                    </a>
-                    <p className="font-ibmRegular text-base lg:text-lg pt-2">
-                      {image.caption}
-                    </p>
-                  </div>
-                );
-              })}
+      <div className="flex flex-col items-center">
+        <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
+          <AboutContent
+            title="Majornas Böcker & Kaffe"
+            contentOne="En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen."
+            contentTwo="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter. "
+          />
+          <Instagram />
+          <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 mx-auto">
+              {images &&
+                numberOfImages(images).map((image) => {
+                  return (
+                    <div className="flex flex-col pt-10" key={image.id}>
+                      <a
+                        href={image.permalink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Image
+                          className="object-cover aspect-square"
+                          src={image.media_url}
+                          alt={image.caption}
+                          width={500}
+                          height={500}
+                        />
+                      </a>
+                      <p className="font-ibmRegular text-base lg:text-lg pt-2">
+                        {image.caption}
+                      </p>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
       <Footer
         openingHours={
           <>

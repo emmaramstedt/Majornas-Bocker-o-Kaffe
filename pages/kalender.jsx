@@ -70,53 +70,55 @@ export default function EventsFeed({ contactDetails }) {
             "Kalender med information om events, bokcirklar, författarkvällar",
         }}
       >
-        <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
-          <EventsWrapper>
-            <FloatMe>
-              <EventsHeader
-                EventHeaderTitle="Kommande nyheter & events"
-                EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
-              />
-              <EventsButton
-                EventsButtonText="Visa fler"
-                setIsActive={setIsActive}
-                isActive={isActive}
-              />
-            </FloatMe>
-            <EventsCardsWrapper isActive={isActive}>
-              {currentEventsItems &&
-                currentEventsItems.map((event, i) => {
-                  return (
-                    <EventsCard
-                      key={i}
-                      EventCategory={event.fields.category}
-                      EventTitle={event.fields.title}
-                      EventContent={event.fields.description}
-                      EventDate={event.fields.date.substring(0, 10)}
-                      EventTime={event.fields.date.substring(11)}
-                      EventLink={event.fields.link}
-                      EventLinkText={event.fields.linkText}
-                    />
-                  );
-                })}
-              {pastEventsItems &&
-                pastEventsItems.map((event, i) => {
-                  return (
-                    <EventsCard
-                      key={i}
-                      EventCategory={event.fields.category}
-                      EventTitle={event.fields.title}
-                      EventContent={event.fields.description}
-                      EventDate={event.fields.date.substring(0, 10)}
-                      EventTime={event.fields.date.substring(11)}
-                      EventLink={event.fields.link}
-                      EventLinkText={event.fields.linkText}
-                    />
-                  );
-                })}
-            </EventsCardsWrapper>
-          </EventsWrapper>
-        </main>
+        <div className="flex flex-col items-center">
+          <main className="xs:mx-[8%] md:mx-[6%] xl:mx-[10%]">
+            <EventsWrapper>
+              <FloatMe>
+                <EventsHeader
+                  EventHeaderTitle="Kommande nyheter & events"
+                  EventHeaderContent="Bokhandeln anordnar regelbundet författarkvällar. En rad uppmärksammade och intressanta författare har gästat bokhandeln."
+                />
+                <EventsButton
+                  EventsButtonText="Visa fler"
+                  setIsActive={setIsActive}
+                  isActive={isActive}
+                />
+              </FloatMe>
+              <EventsCardsWrapper isActive={isActive}>
+                {currentEventsItems &&
+                  currentEventsItems.map((event, i) => {
+                    return (
+                      <EventsCard
+                        key={i}
+                        EventCategory={event.fields.category}
+                        EventTitle={event.fields.title}
+                        EventContent={event.fields.description}
+                        EventDate={event.fields.date.substring(0, 10)}
+                        EventTime={event.fields.date.substring(11)}
+                        EventLink={event.fields.link}
+                        EventLinkText={event.fields.linkText}
+                      />
+                    );
+                  })}
+                {pastEventsItems &&
+                  pastEventsItems.map((event, i) => {
+                    return (
+                      <EventsCard
+                        key={i}
+                        EventCategory={event.fields.category}
+                        EventTitle={event.fields.title}
+                        EventContent={event.fields.description}
+                        EventDate={event.fields.date.substring(0, 10)}
+                        EventTime={event.fields.date.substring(11)}
+                        EventLink={event.fields.link}
+                        EventLinkText={event.fields.linkText}
+                      />
+                    );
+                  })}
+              </EventsCardsWrapper>
+            </EventsWrapper>
+          </main>
+        </div>
       </Layout>
       <Footer
         openingHours={

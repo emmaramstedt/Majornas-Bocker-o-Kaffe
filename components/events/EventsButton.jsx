@@ -10,7 +10,7 @@ export default function EventsButton({
   };
 
   return (
-    <div className="eventsButtonWrapper h-fit font-ibmRegular">
+    <div className="eventsButtonWrapper h-fit font-ibmRegular max-w-[368px]">
       <button
         onClick={() => handleClick(true)}
         className="border-solid border border-[#111827] rounded-full cursor-pointer bg-[#F9FAFB] py-[12px] px-[22px]"

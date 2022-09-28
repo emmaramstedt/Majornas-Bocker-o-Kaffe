@@ -24,11 +24,11 @@ body {
   padding: 0;
   margin: 0;
 }
+
 main {
   max-width: 1280px;
-  min-height: 95vh;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1280px) {
   main {
     margin-right: auto;
     margin-left: auto;
@@ -117,11 +117,10 @@ nav ul li {
 }
 
 .eventsWrapper {
-  max-width: 1920px;
   margin: auto;
   justify-items: center;
-  grid-column-gap: 32px;
-  grid-template-columns: fit-content(1fr) fit-content(1fr);
+  width: 100%;
+  grid-template-columns: 368px;
   grid-template-rows: fit-content(320px);
 }
 
