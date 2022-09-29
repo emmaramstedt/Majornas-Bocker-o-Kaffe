@@ -14,7 +14,6 @@ import FooterDecorTwo from "../public/images/footer/row2.svg";
 import InstagramLogo from "../public/images/footer/instagram.svg";
 import EmailLogo from "../public/images/footer/email.svg";
 import TelephoneLogo from "../public/images/footer/telephone.svg";
-import AboutWrapper from "../components/about/AboutWrapper";
 import AboutContent from "../components/about/AboutContent";
 import Instagram from "../components/about/Instagram";
 
@@ -23,12 +22,17 @@ export async function getStaticProps() {
     content_type: "contactDetails",
   });
 
+  const aboutRes = await client.getEntries({
+    content_type: "omOssContent",
+  });
+
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   let data = await fetch(url);
   const feed = await data.json();
 
   return {
     props: {
+      omOssContent: aboutRes.items,
       contactDetails: res.items,
       images: feed.data,
     },
@@ -58,8 +62,7 @@ export function numberOfImages(images) {
   }
   return images;
 }
-
-export default function Home({ contactDetails, images }) {
+export default function Home({ omOssContent, contactDetails, images }) {
   return (
     <Layout
       pageMeta={{
@@ -69,9 +72,9 @@ export default function Home({ contactDetails, images }) {
     >
       <main className="mt-[40px] xs:mx-[8%] md:mx-[6%] xl:mx-[10%] xll:mx-[20%]">
         <AboutContent
-          title="Majornas Böcker & Kaffe"
-          contentOne="En trivsam bokhandel där man kan botanisera bland böcker eller slå sig ner med en espresso och dagstidningen."
-          contentTwo="Majornas böcker & kaffe är en oberoende bokhandel som öppnade sommaren 2019. Här finner du aktuell skönlitteratur, barnböcker, serieböcker och intressanta fackböcker. Förutom böcker säljs  också kort, pussel och spel samt en del pappersvaror och roliga presenter. "
+          title={contactDetails[0].fields.companyName}
+          contentOne={omOssContent[0].fields.paragraphOne}
+          contentTwo={omOssContent[0].fields.paragraphTwo}
         />
         <Instagram />
         <div>
