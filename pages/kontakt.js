@@ -20,14 +20,19 @@ import TelephoneLogo from "../public/images/footer/telephone.svg";
 
 export async function getStaticProps() {
   const res = await client.getEntries({ content_type: "contactDetails" });
+
+  const kontaktRes = await client.getEntries({
+    content_type: "kontaktContent",
+  });
   return {
     props: {
       contactDetails: res.items,
+      kontaktContent: kontaktRes.items,
     },
   };
 }
 
-export default function contactPage({ contactDetails }) {
+export default function contactPage({ kontaktContent, contactDetails }) {
   return (
     <>
       <Layout
@@ -51,6 +56,7 @@ export default function contactPage({ contactDetails }) {
             openingHoursTitle1={contactDetails[0].fields.openingHoursTitle1}
             openingHoursTitle2={contactDetails[0].fields.openingHoursTitle2}
             openingHoursTitle3={contactDetails[0].fields.openingHoursTitle3}
+            text={kontaktContent[0].fields.paragraph}
           />
         </main>
       </Layout>
